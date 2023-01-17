@@ -15,4 +15,9 @@ public class AAA : MonoBehaviour
     {
         
     }
+
+    public void TestGit()
+    {
+        Debug.Log("VAR");
+    }
 }

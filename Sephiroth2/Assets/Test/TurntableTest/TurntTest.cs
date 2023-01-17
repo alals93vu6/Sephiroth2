@@ -15,5 +15,11 @@ public class TurntTest : MonoBehaviour
     void Update()
     {
         if (IsRun){transform.Rotate(0,0,-150 * Time.deltaTime);}
+
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            if (IsRun){IsRun = false;}
+            else{IsRun = true;}
+        }
     }
 }
