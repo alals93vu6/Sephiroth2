@@ -9,12 +9,16 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Script/GamePlaying/GamePlayingManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/GamePlaying/Pointer/PointerManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/IState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Player/PlayerTurntable/EventAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Test/ScriptTest/AAA.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Test/ScriptTest/HpData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Shi_WeirdTales/Assets/Scirpt/GamePlaying/GamePlayManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Shi_WeirdTales/Assets/Scirpt/Monster/AreaA_Insitute/InsituteA/InsituteMonsterA.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Shi_WeirdTales/Assets/Scirpt/Monster/MonsterGeneral.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Shi_WeirdTales/Assets/Scirpt/Player/PlayerActor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Shi_WeirdTales/Assets/Scirpt/Player/PlayerState/AttackState.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -88,7 +92,7 @@
       <updated>1673949400603</updated>
       <workItem from="1673949403555" duration="4927000" />
       <workItem from="1674376741574" duration="2112000" />
-      <workItem from="1674762686857" duration="3342000" />
+      <workItem from="1674762686857" duration="7989000" />
     </task>
     <servers />
   </component>

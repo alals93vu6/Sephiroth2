@@ -5,8 +5,7 @@ using Project.Event;
 using UnityEngine;
 
 public class TurntTest : MonoBehaviour
-{
-    [SerializeField] public bool IsRun;
+{ 
     // Start is called before the first frame update
     void Start()
     {
@@ -16,12 +15,11 @@ public class TurntTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (IsRun){transform.Rotate(0,0,-150 * Time.deltaTime);}
-
         if (Input.GetKeyDown(KeyCode.S))
         {
-            if (IsRun){IsRun = false; EventBus.Post(new StopTruntableDetected());}
-            else{IsRun = true;}
+            var Pointer = FindObjectOfType<PointerManager>();
+            if (Pointer.IsRun){Pointer.OnStopPointer();}
+            else{Pointer.OnResetPointer();}
         }
     }
 }
