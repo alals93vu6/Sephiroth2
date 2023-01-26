@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Project;
+using Project.Event;
 using UnityEngine;
 
 public class TurntTest : MonoBehaviour
@@ -18,7 +20,7 @@ public class TurntTest : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.S))
         {
-            if (IsRun){IsRun = false;}
+            if (IsRun){IsRun = false; EventBus.Post(new StopTruntableDetected());}
             else{IsRun = true;}
         }
     }
