@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class GamePlayingManager : MonoBehaviour
 {
+    [SerializeField] private PlayerManager _playerManager;
     [SerializeField] public TurntableGeneric[] _turntableGenerics;
     // Start is called before the first frame update
     void Start()
@@ -13,6 +14,7 @@ public class GamePlayingManager : MonoBehaviour
         EventBus.Subscribe<StopTruntableDetected>(OnStopTruntable);
         
         _turntableGenerics = FindObjectsOfType<TurntableGeneric>();
+        _playerManager = FindObjectOfType<PlayerManager>();
     }
 
     private void OnStopTruntable(StopTruntableDetected obj)
@@ -21,6 +23,8 @@ public class GamePlayingManager : MonoBehaviour
         {
             VARIABLE.OnChessEvent();
         }
+
+        
     }
 
     // Update is called once per frame
