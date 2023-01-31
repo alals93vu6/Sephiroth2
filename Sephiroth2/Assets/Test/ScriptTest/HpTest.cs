@@ -21,14 +21,8 @@ public class HpTest : MonoBehaviour
         {
             _hpData.NowHP -= 10f;
         }
-
-        if ( _hpData.NowHP <= 0)
-        {
-            _hpData.NowHP = 0f;
-        }
-
+        _hpData.NowHP = Mathf.Clamp(_hpData.NowHP, 0, _hpData.MaxHP);
         _hpData.ShowHPFloat =  _hpData.NowHP /  _hpData.MaxHP;
-
         _hpData.ShowPlayerHP.fillAmount = Mathf.Lerp( _hpData.ShowPlayerHP.fillAmount,  _hpData.ShowHPFloat, 0.02f);
     }
 

@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerActor : MonoBehaviour
 {
     [SerializeField] private IState CurrenState = new PlayerRound();
+    [SerializeField] public float RemainingDefense;
 
     public PointerManager _pointerManager;
     // Start is called before the first frame update
@@ -12,15 +13,29 @@ public class PlayerActor : MonoBehaviour
     {
         changeState(new PlayerRound());
         _pointerManager = FindObjectOfType<PointerManager>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         CurrenState.OnStayState(this);
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            OnPlayerDefense();
+        }
     }
-    
-    
+
+    public void OnPlayerDefense()
+    {
+        RemainingDefense--;
+        RemainingDefense = Mathf.Clamp(RemainingDefense, 0, 3);
+        if (RemainingDefense > 0)
+        {
+            Debug.Log("SSS");
+        }
+    }
+
 
     public void changeState(IState nextState)
     {

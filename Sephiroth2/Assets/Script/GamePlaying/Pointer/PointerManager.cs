@@ -21,7 +21,7 @@ public class PointerManager : MonoBehaviour
 
     public void OnStopPointer()
     {
-        IsRun = false;
+        //IsRun = false;
         EventBus.Post(new StopTruntableDetected());
     }
 
