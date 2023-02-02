@@ -7,6 +7,7 @@ public class PlayerRound : IState
     public void OnEnterState(object action)
     {
         var actor = (PlayerActor) action;
+        actor.NowActorPoints = 1;
         //throw new System.NotImplementedException();
     }
 
@@ -23,6 +24,7 @@ public class PlayerRound : IState
     public void OnExitState(object action)
     {
         var actor = (PlayerActor) action;
+        actor.NowActorPoints = 0;
         //throw new System.NotImplementedException();
     }
 }

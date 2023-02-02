@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerActor : MonoBehaviour
 {
-    [SerializeField] private IState CurrenState = new PlayerRound();
+    [SerializeField] public IState CurrenState = new PlayerRound();
+    [SerializeField] public int NowActorPoints;
     [SerializeField] public float RemainingDefense;
 
     public PointerManager _pointerManager;
@@ -20,7 +21,7 @@ public class PlayerActor : MonoBehaviour
     void Update()
     {
         CurrenState.OnStayState(this);
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.S))
         {
             OnPlayerDefense();
         }

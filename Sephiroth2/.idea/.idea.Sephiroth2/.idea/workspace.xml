@@ -21,7 +21,7 @@
     <setting file="file://$PROJECT_DIR$/../../Shi_WeirdTales/Assets/Scirpt/Monster/AreaA_Insitute/InsituteA/InsituteMonsterA.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Shi_WeirdTales/Assets/Scirpt/Monster/MonsterGeneral.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Shi_WeirdTales/Assets/Scirpt/Player/PlayerActor.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Shi_WeirdTales/Assets/Scirpt/Player/PlayerState/AttackState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Shi_WeirdTales/Assets/Scirpt/Player/PlayerState/AttackState.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -98,6 +98,7 @@
       <workItem from="1674762686857" duration="7989000" />
       <workItem from="1674856228137" duration="2268000" />
       <workItem from="1675192034619" duration="3471000" />
+      <workItem from="1675362669667" duration="420000" />
     </task>
     <servers />
   </component>
