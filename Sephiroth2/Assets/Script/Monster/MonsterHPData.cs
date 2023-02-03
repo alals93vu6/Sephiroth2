@@ -11,6 +11,8 @@ namespace Project.MonsterData
     {
         [SerializeField] public int EnemyMaxHP;
         [SerializeField] public int EnemyNowHP;
+        [SerializeField] public int AttackCD;
+        [SerializeField] public int AttackCDMax;
     }
 }
 

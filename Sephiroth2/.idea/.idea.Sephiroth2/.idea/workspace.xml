@@ -12,13 +12,16 @@
     <setting file="file://$PROJECT_DIR$/Assets/Script/GamePlaying/Pointer/PointerManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/GamePlaying/Pointer/ResetPoint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/IState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Monster/MonsterGeneric.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Monster/MonsterHPData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Player/PlayerState/WaitRound.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Player/PlayerTurntable/EventAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Test/ScriptTest/AAA.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Test/ScriptTest/HpData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Shi_WeirdTales/Assets/Scirpt/GamePlaying/GamePlayManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Shi_WeirdTales/Assets/Scirpt/Monster/AreaA_Insitute/InsituteA/InsituteAanimator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Shi_WeirdTales/Assets/Scirpt/Monster/AreaA_Insitute/InsituteA/InsituteMonsterA.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Shi_WeirdTales/Assets/Scirpt/Monster/AreaA_Insitute/InsituteA/InstituteA.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Shi_WeirdTales/Assets/Scirpt/Monster/MonsterGeneral.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Shi_WeirdTales/Assets/Scirpt/Player/PlayerActor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Shi_WeirdTales/Assets/Scirpt/Player/PlayerState/AttackState.cs" root0="SKIP_HIGHLIGHTING" />
@@ -98,7 +101,8 @@
       <workItem from="1674762686857" duration="7989000" />
       <workItem from="1674856228137" duration="2268000" />
       <workItem from="1675192034619" duration="3471000" />
-      <workItem from="1675362669667" duration="420000" />
+      <workItem from="1675362669667" duration="1821000" />
+      <workItem from="1675463331740" duration="2441000" />
     </task>
     <servers />
   </component>
