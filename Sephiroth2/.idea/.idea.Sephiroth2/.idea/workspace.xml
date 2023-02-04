@@ -20,9 +20,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/Test/ScriptTest/HpData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Shi_WeirdTales/Assets/Scirpt/GamePlaying/GamePlayManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Shi_WeirdTales/Assets/Scirpt/Monster/AreaA_Insitute/InsituteA/InsituteAanimator.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Shi_WeirdTales/Assets/Scirpt/Monster/AreaA_Insitute/InsituteA/InsituteMonsterA.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Shi_WeirdTales/Assets/Scirpt/Monster/AreaA_Insitute/InsituteA/InsituteMonsterA.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Shi_WeirdTales/Assets/Scirpt/Monster/AreaA_Insitute/InsituteA/InstituteA.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Shi_WeirdTales/Assets/Scirpt/Monster/MonsterGeneral.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Shi_WeirdTales/Assets/Scirpt/Monster/MonsterGeneral.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Shi_WeirdTales/Assets/Scirpt/Player/PlayerActor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Shi_WeirdTales/Assets/Scirpt/Player/PlayerState/AttackState.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -102,7 +102,8 @@
       <workItem from="1674856228137" duration="2268000" />
       <workItem from="1675192034619" duration="3471000" />
       <workItem from="1675362669667" duration="1821000" />
-      <workItem from="1675463331740" duration="2441000" />
+      <workItem from="1675463331740" duration="2509000" />
+      <workItem from="1675525457939" duration="1960000" />
     </task>
     <servers />
   </component>

@@ -8,7 +8,6 @@ public class MTestA : MonsterGeneric
     public override void Start()
     {
         base.Start();
-        Debug.Log("Hi");
     }
 
     // Update is called once per frame
@@ -20,6 +19,5 @@ public class MTestA : MonsterGeneric
     public override void OnPassRound()
     {
         base.OnPassRound();
-        Debug.Log("PassChike");
     }
 }

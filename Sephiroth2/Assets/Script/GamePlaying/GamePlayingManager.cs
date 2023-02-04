@@ -24,7 +24,8 @@ public class GamePlayingManager : MonoBehaviour
 
     private void OnEnemyActor(OnEnemyActorDetected obj)
     {
-        //Array.ForEach(_MonsterGenerics,monsters => monsters.OnPassRound());
+        var PlayerHP = FindObjectOfType<HpTest>();
+        PlayerHP.HpHit();
     }
 
     private void OnNewRound(NewRoundDetected obj)

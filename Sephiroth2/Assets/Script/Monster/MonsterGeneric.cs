@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Project;
+using Project.Event;
 using Project.MonsterData;
 using UnityEngine;
 
@@ -28,12 +30,12 @@ public class MonsterGeneric : MonoBehaviour
         if (AttackCD == 0)
         {
             AttackCD = AttackCycle;
-            Debug.Log("EnemyStrike");
+            EventBus.Post(new OnEnemyActorDetected());
         }
         else
         {
             AttackCD--;
-            Debug.Log("EnemyPass");
         }
     }
+    
 }
