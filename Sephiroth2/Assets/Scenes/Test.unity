@@ -3709,6 +3709,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerActor: {fileID: 0}
+  CauseDamage: 0
 --- !u!1 &1923588041
 GameObject:
   m_ObjectHideFlags: 0
@@ -3839,7 +3840,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: ced51250f13e34440b2295ecafa52dca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3877,10 +3878,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73830213e6bc4334c8a2066559879106, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyMaxHP: 0
+  EnemyMaxHP: 10
   EnemyNowHP: 0
   AttackCD: 0
   AttackCycle: 3
+  PositionalOrder: 0
+  ShowHPimg: {fileID: 0}
+  ShowHPNumber: 0
 --- !u!1 &1947142227
 GameObject:
   m_ObjectHideFlags: 0

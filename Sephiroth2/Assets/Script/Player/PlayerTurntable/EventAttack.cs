@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Project;
+using Project.Event;
 using UnityEngine;
 
 public class EventAttack : TurntableGeneric
@@ -18,6 +20,8 @@ public class EventAttack : TurntableGeneric
     
     public override void OnPointed()
     {
-        Debug.Log("Attack!");
+        var AttackNumber = FindObjectOfType<PlayerManager>();
+        AttackNumber.CauseDamage = 1;
+        EventBus.Post(new PlayerAttackDetected());
     }
 }

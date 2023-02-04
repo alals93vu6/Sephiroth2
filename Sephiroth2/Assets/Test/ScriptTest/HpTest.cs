@@ -10,7 +10,7 @@ public class HpTest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _hpData.ShowPlayerHP = GameObject.Find("HpShow").GetComponent<Image>();
+        _hpData.ShowPlayerHP = GameObject.Find("PlayerHpShow").GetComponent<Image>();
         _hpData.NowHP =  _hpData.MaxHP;
     }
 

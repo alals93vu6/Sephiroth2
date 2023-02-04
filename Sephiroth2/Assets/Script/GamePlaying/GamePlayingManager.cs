@@ -16,10 +16,18 @@ public class GamePlayingManager : MonoBehaviour
         EventBus.Subscribe<StopTruntableDetected>(OnStopTruntable);
         EventBus.Subscribe<NewRoundDetected>(OnNewRound);
         EventBus.Subscribe<OnEnemyActorDetected>(OnEnemyActor);
+        EventBus.Subscribe<PlayerAttackDetected>(OnPlayerAttack);
         
         _turntableGenerics = FindObjectsOfType<TurntableGeneric>();
         _MonsterGenerics = FindObjectsOfType<MonsterGeneric>();
         _playerManager = FindObjectOfType<PlayerManager>();
+    }
+
+    private void OnPlayerAttack(PlayerAttackDetected obj)
+    {
+        var PlayerDamage = FindObjectOfType<PlayerManager>();
+        _playerManager.CauseDamage = 1f;
+        Array.ForEach(_MonsterGenerics,GetDamage=>GetDamage.OnGitHit(PlayerDamage.CauseDamage));
     }
 
     private void OnEnemyActor(OnEnemyActorDetected obj)
