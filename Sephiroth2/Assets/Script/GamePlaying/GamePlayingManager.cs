@@ -26,14 +26,12 @@ public class GamePlayingManager : MonoBehaviour
     private void OnPlayerAttack(PlayerAttackDetected obj)
     {
         var PlayerDamage = FindObjectOfType<PlayerManager>();
-        _playerManager.CauseDamage = 1f;
         Array.ForEach(_MonsterGenerics,GetDamage=>GetDamage.OnGitHit(PlayerDamage.CauseDamage));
     }
 
     private void OnEnemyActor(OnEnemyActorDetected obj)
     {
-        var PlayerHP = FindObjectOfType<HpTest>();
-        PlayerHP.HpHit();
+        _playerManager._playerFettle.HpHit();
     }
 
     private void OnNewRound(NewRoundDetected obj)
@@ -45,7 +43,7 @@ public class GamePlayingManager : MonoBehaviour
 
     private void OnStopTruntable(StopTruntableDetected obj)
     {
-        Array.ForEach(_turntableGenerics,turnyable => turnyable.OnChessEvent());
+        Array.ForEach(_turntableGenerics,turnyable => turnyable.OnChoseEvent());
     }
     
     

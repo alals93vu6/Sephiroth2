@@ -6,6 +6,7 @@ using UnityEngine;
 public class TurntableGeneric : MonoBehaviour
 {
     [SerializeField] public bool IsChess;
+    [SerializeField] public bool Tagged;
     void Start()
     {
         
@@ -17,12 +18,17 @@ public class TurntableGeneric : MonoBehaviour
         
     }
 
-    public void OnChessEvent()
+    public void OnChoseEvent()
     {
-        if (IsChess)
+        if (IsChess && !Tagged)
         {
             OnPointed();
         }
+    }
+
+    public void OnChoseDefense()
+    {
+        
     }
 
     public virtual void OnPointed()

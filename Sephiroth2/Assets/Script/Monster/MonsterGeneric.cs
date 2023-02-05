@@ -54,7 +54,7 @@ public class MonsterGeneric : MonoBehaviour
     {
         EnemyNowHP = Mathf.Clamp(EnemyNowHP, 0, EnemyMaxHP);
         ShowHPNumber = EnemyNowHP/EnemyMaxHP;
-        ShowHPimg.fillAmount = Mathf.Lerp(ShowHPimg.fillAmount, ShowHPNumber, 0.2f);
+        ShowHPimg.fillAmount = Mathf.Lerp(ShowHPimg.fillAmount, ShowHPNumber, 0.06f);
     }
 
 }
