@@ -23,17 +23,17 @@ public class PlayerActor : MonoBehaviour
         CurrenState.OnStayState(this);
         if (Input.GetKeyDown(KeyCode.S))
         {
-            OnPlayerDefense();
+            PlayerDefenseActor();
         }
     }
 
-    public void OnPlayerDefense()
+    public void PlayerDefenseActor()
     {
         RemainingDefense--;
         RemainingDefense = Mathf.Clamp(RemainingDefense, 0, 3);
         if (RemainingDefense > 0)
         {
-            Debug.Log("SSS");
+            _pointerManager.OnPlayerDefense();
         }
     }
 
