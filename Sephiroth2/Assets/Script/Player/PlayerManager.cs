@@ -11,11 +11,13 @@ public class PlayerManager : MonoBehaviour
     [Header("物件")]
     [SerializeField] public PlayerActor _playerActor;
     [SerializeField] public PlayerFettle _playerFettle;
+    [SerializeField] public TurntableManager _turntable;
     // Start is called before the first frame update
     void Start()
     {
         _playerActor = FindObjectOfType<PlayerActor>();
         _playerFettle = FindObjectOfType<PlayerFettle>();
+        _turntable = FindObjectOfType<TurntableManager>();
     }
 
     // Update is called once per frame

@@ -14,8 +14,7 @@ public class TurntableManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SummonState = 0;
-        
+        OnPlayerSummon(0);
         PlayerPrefs.SetInt("NowSummonA",1);
         PlayerPrefs.SetInt("NowSummonB",2);
     }
@@ -23,10 +22,7 @@ public class TurntableManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            OnPlayerSummon();
-        }
+        
     }
 
     public void SimonCheck()
@@ -34,14 +30,22 @@ public class TurntableManager : MonoBehaviour
         
     }
 
-    public void OnPlayerSummon()
+    public void OnPlayerSummon(int ChoseState)
     {
+        SummonState = ChoseState;
         int NowSummon = (SummonState == 1) ? PlayerPrefs.GetInt("NowSummonA") : (SummonState == 2) ? PlayerPrefs.GetInt("NowSummonB") : 0;
         Destroy(GameObject.FindWithTag("Summoner"));
         //Destroy(GameObject.FindWithTag("SummonerTurntable"));
-        Instantiate(Summoner[NowSummon], this.transform.position, this.transform.rotation);
+        Instantiate(Summoner[NowSummon], this.transform.position - SummonerOffset, new Quaternion(0,0,0,0));
         //Instantiate(SummonerTurntable[NowSummon], this.transform.position, this.transform.rotation);
     }
+    
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.white;
+        Gizmos.DrawWireSphere(this.transform.position -SummonerOffset,0.3f);
+    }
+
     /*
     var NowSummoner = GameObject.FindWithTag("Summoner");
     var NowSummonerSkill = GameObject.FindWithTag("SummonerTurntable");
