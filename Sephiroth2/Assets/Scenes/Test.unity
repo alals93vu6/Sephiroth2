@@ -262,6 +262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsChess: 0
+  Tagged: 0
 --- !u!1 &44734770
 GameObject:
   m_ObjectHideFlags: 0
@@ -653,6 +654,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsChess: 0
+  Tagged: 0
 --- !u!1 &465881994
 GameObject:
   m_ObjectHideFlags: 0
@@ -794,11 +796,11 @@ GameObject:
   - component: {fileID: 536052133}
   m_Layer: 0
   m_Name: TheSummonerA
-  m_TagString: Untagged
+  m_TagString: Summoner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &536052132
 Transform:
   m_ObjectHideFlags: 0
@@ -807,11 +809,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 536052131}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -342, y: -187.36, z: 0}
+  m_LocalPosition: {x: -6.8200073, y: 1.6399994, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1838486835}
-  m_RootOrder: 1
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &536052133
 SpriteRenderer:
@@ -961,6 +963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsChess: 0
+  Tagged: 0
 --- !u!68 &632283821
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -1144,6 +1147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsChess: 0
+  Tagged: 0
 --- !u!1 &667169013
 GameObject:
   m_ObjectHideFlags: 0
@@ -1470,6 +1474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsChess: 0
+  Tagged: 0
 --- !u!1 &871466503
 GameObject:
   m_ObjectHideFlags: 0
@@ -1684,6 +1689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsChess: 0
+  Tagged: 0
 --- !u!1 &1022708766
 GameObject:
   m_ObjectHideFlags: 0
@@ -2222,6 +2228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsChess: 0
+  Tagged: 0
 --- !u!1 &1243555194
 GameObject:
   m_ObjectHideFlags: 0
@@ -2363,6 +2370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsChess: 0
+  Tagged: 0
 --- !u!1 &1321536168
 GameObject:
   m_ObjectHideFlags: 0
@@ -2767,6 +2775,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsChess: 0
+  Tagged: 0
 --- !u!1 &1426465680
 GameObject:
   m_ObjectHideFlags: 0
@@ -3120,6 +3129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsChess: 0
+  Tagged: 0
 --- !u!1 &1610602391
 GameObject:
   m_ObjectHideFlags: 0
@@ -3132,11 +3142,11 @@ GameObject:
   - component: {fileID: 1610602393}
   m_Layer: 0
   m_Name: TheSummonerB
-  m_TagString: Untagged
+  m_TagString: Summoner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1610602392
 Transform:
   m_ObjectHideFlags: 0
@@ -3145,11 +3155,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1610602391}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -342, y: -187.36, z: 0}
+  m_LocalPosition: {x: -6.8200073, y: 1.6399994, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1838486835}
-  m_RootOrder: 2
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1610602393
 SpriteRenderer:
@@ -3343,6 +3353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsChess: 0
+  Tagged: 0
 --- !u!1 &1635656456
 GameObject:
   m_ObjectHideFlags: 0
@@ -3632,6 +3643,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsChess: 0
+  Tagged: 0
 --- !u!1 &1838486833
 GameObject:
   m_ObjectHideFlags: 0
@@ -3646,7 +3658,7 @@ GameObject:
   - component: {fileID: 1838486834}
   m_Layer: 0
   m_Name: PlayerManager
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3676,8 +3688,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1462647831}
-  - {fileID: 536052132}
-  - {fileID: 1610602392}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3708,9 +3718,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27544ae064bb7db4d96aefa6c2f118ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CauseDamage: 0
   _playerActor: {fileID: 0}
   _playerFettle: {fileID: 0}
-  CauseDamage: 0
 --- !u!1 &1923588041
 GameObject:
   m_ObjectHideFlags: 0
@@ -3886,6 +3896,7 @@ MonoBehaviour:
   PositionalOrder: 0
   ShowHPimg: {fileID: 0}
   ShowHPNumber: 0
+  CDTest: {fileID: 1321536170}
 --- !u!1 &1947142227
 GameObject:
   m_ObjectHideFlags: 0

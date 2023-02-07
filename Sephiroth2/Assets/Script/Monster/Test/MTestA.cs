@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class MTestA : MonsterGeneric
 {
+    [SerializeField] private Text CDTest;
     // Start is called before the first frame update
     public override void Start()
     {
@@ -16,6 +17,7 @@ public class MTestA : MonsterGeneric
     public override void Update()
     {
         base.Update();
+        CDTest.text = "AttackCD：" + AttackCD;
     }
 
     public override void OnPassRound()

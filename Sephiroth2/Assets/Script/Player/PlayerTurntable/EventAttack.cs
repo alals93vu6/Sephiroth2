@@ -21,7 +21,7 @@ public class EventAttack : TurntableGeneric
     public override void OnPointed()
     {
         var AttackNumber = FindObjectOfType<PlayerManager>();
-        AttackNumber.CauseDamage = 1;
+        AttackNumber.CauseDamage = 2;
         EventBus.Post(new PlayerAttackDetected());
     }
 }
