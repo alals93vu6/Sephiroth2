@@ -4,26 +4,19 @@ using UnityEngine;
 
 public class Creat_Effect_Player : MonoBehaviour
 {
-    [Header("玩家一號位")]
-    [SerializeField] public GameObject Buff_Recover_pos_1;
-    [SerializeField] public GameObject Buff_Armor_pos_1;
-    [Header("玩家二號位")]
-    [SerializeField] public GameObject Buff_Recover_pos_2;
-    [SerializeField] public GameObject Buff_Armor_pos_2;
-    [Header("玩家三號位")]
-    [SerializeField] public GameObject Buff_Recover_pos_3;
-    [SerializeField] public GameObject Buff_Armor_pos_3;
-
-    [Header("敵人一號位")]
-    [SerializeField] public GameObject enemy_Pos_1;
-
-    [Header("敵人二號位")]
-    [SerializeField] public GameObject enemy_Pos_2;
+    [Header("恢復特效位置")]
+    [SerializeField] public List<GameObject> Buff_Recover_pos;
+    [Header("防禦特效位置")]
+    [SerializeField] public List<GameObject> Buff_Armor_pos;
+    [Header("受擊特效位置")]
+    [SerializeField] public List<GameObject> Buff_Hit_pos;
 
 
     [Header("特效物件")]
     [SerializeField] public GameObject Buff_Recover;
     [SerializeField] public GameObject Buff_Armor;
+    [SerializeField] public GameObject Attack_Basic;
+    [SerializeField] public GameObject Shake_Camera_Attack;
 
     void Start()
     {
@@ -33,13 +26,18 @@ public class Creat_Effect_Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.Z))
         {
-            Creat(Buff_Recover, Buff_Recover_pos_1);
+            Creat(Buff_Recover, Buff_Recover_pos[0]);
         }
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.X))
         {
-            Creat(Buff_Armor, Buff_Armor_pos_1);
+            Creat(Buff_Armor, Buff_Armor_pos[0]);
+        }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            Creat(Attack_Basic, Buff_Hit_pos[0]);
+            Instantiate(Shake_Camera_Attack,gameObject.transform.position,new Quaternion(0,0,0,0));
         }
 
     }
