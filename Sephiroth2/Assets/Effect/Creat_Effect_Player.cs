@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class Creat_Effect_Player : MonoBehaviour
 {
-    public GameObject Buff_pos;
+    [Header("特效位置")]
+    [SerializeField] public GameObject Buff_Recover_pos;
+    [SerializeField] public GameObject Buff_Armor_pos;
+    [Header("特效物件")]
+    [SerializeField] public GameObject Buff_Recover;
+    [SerializeField] public GameObject Buff_Armor;
 
-    public GameObject Buff_Recover;
     void Start()
     {
 
@@ -15,14 +19,18 @@ public class Creat_Effect_Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.R))
         {
-            Debug.Log("Z");
-            Creat_Effect(Buff_Recover);
+            Creat(Buff_Recover, Buff_Recover_pos);
         }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            Creat(Buff_Armor, Buff_Armor_pos);
+        }
+
     }
-    public void Creat_Effect(GameObject Effect)
+    public void Creat(GameObject Effect, GameObject pos)
     {
-        Instantiate(Effect, Buff_pos.transform.position, new Quaternion(0, 0, 0, 0));
+        Instantiate(Effect, pos.transform.position, new Quaternion(0, 0, 0, 0));
     }
 }
