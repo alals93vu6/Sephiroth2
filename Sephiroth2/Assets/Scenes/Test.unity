@@ -1554,7 +1554,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 933346955}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.54, y: -1.61, z: 5}
+  m_LocalPosition: {x: -8.54, y: -0.19, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1543889117}
@@ -3204,7 +3204,7 @@ GameObject:
   - component: {fileID: 1543889117}
   - component: {fileID: 1543889116}
   m_Layer: 0
-  m_Name: Creat_Buff_or_Attack_player
+  m_Name: Creat_Buff_or_Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3222,8 +3222,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fb2a56fa1910cf4d9ae026ec51df65f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Buff_Recover_pos: {fileID: 933346955}
-  Buff_Armor_pos: {fileID: 1099941608}
+  Buff_Recover_pos_1: {fileID: 933346955}
+  Buff_Armor_pos_1: {fileID: 1099941608}
+  Buff_Recover_pos_2: {fileID: 0}
+  Buff_Armor_pos_2: {fileID: 0}
+  Buff_Recover_pos_3: {fileID: 0}
+  Buff_Armor_pos_3: {fileID: 0}
+  enemy_Pos_1: {fileID: 0}
+  enemy_Pos_2: {fileID: 0}
   Buff_Recover: {fileID: 6441827211846178583, guid: e954a0517c3900549a5bdd2c41ddff13,
     type: 3}
   Buff_Armor: {fileID: 7186633496044411361, guid: 4b9eb34040ee6f2419191ed731c392f8,
