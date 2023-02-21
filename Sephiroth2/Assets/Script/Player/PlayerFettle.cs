@@ -28,6 +28,23 @@ public class PlayerFettle : MonoBehaviour
 
     public void HpHit(float GetDamage)
     {
-        _hpData.NowHP -= GetDamage;
+        if (_hpData.ArmorValue == 0)
+        {
+            _hpData.NowHP -= GetDamage;
+        }
+        else
+        {
+            if (GetDamage >= _hpData.ArmorValue)
+            {
+                _hpData.NowHP -= GetDamage - _hpData.ArmorValue;
+                _hpData.ArmorValue = 0f;
+            }
+            else
+            {
+                _hpData.ArmorValue -= GetDamage;
+            }
+        }
+
+        
     }
 }
