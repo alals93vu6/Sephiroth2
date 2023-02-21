@@ -13,6 +13,7 @@ public class MonsterGeneric : MonoBehaviour
     [SerializeField] public float EnemyNowHP;
     [SerializeField] public int AttackCD;
     [SerializeField] public int AttackCycle;
+    [SerializeField] public int AttackDamage;
     [SerializeField] public int PositionalOrder;
 
     [Header("UI數值")] 
@@ -34,10 +35,11 @@ public class MonsterGeneric : MonoBehaviour
 
     public virtual void OnPassRound()
     {
+        var Player = FindObjectOfType<PlayerManager>();
         if (AttackCD == 0)
         {
             AttackCD = AttackCycle;
-            EventBus.Post(new OnEnemyActorDetected());
+            Player._playerFettle.HpHit(AttackDamage);
         }
         else
         {

@@ -11,6 +11,7 @@ namespace Project.PlayerHpData
         [SerializeField] public float ShowHPFloat;
         [SerializeField] public float MaxHP;
         [SerializeField] public float NowHP;
+        [SerializeField] public float ArmorValue;
     }
 }
 

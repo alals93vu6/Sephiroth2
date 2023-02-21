@@ -20,20 +20,12 @@ public class TurntableGeneric : MonoBehaviour
 
     public void OnChoseEvent()
     {
-        if(IsChess && !Tagged)
+        if(IsChess)
         {
             OnPointed();
         }
     }
-
-    public void OnChoseDefense()
-    {
-        if(IsChess && Tagged)
-        {
-            Debug.Log("DDDDD");
-        }
-    }
-
+    
     public virtual void OnPointed()
     {
         
@@ -54,4 +46,14 @@ public class TurntableGeneric : MonoBehaviour
             IsChess = false;
         }
     }
+    
+    /*
+    public void OnChoseDefense()
+    {
+        if(IsChess && Tagged)
+        {
+            Debug.Log("DDDDD");
+        }
+    }
+    */
 }

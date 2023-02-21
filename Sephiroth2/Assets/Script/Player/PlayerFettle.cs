@@ -19,15 +19,15 @@ public class PlayerFettle : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            HpHit();  
+            HpHit(10);  
         }
         _hpData.NowHP = Mathf.Clamp(_hpData.NowHP, 0, _hpData.MaxHP);
         _hpData.ShowHPFloat =  _hpData.NowHP /  _hpData.MaxHP;
         _hpData.ShowPlayerHP.fillAmount = Mathf.Lerp( _hpData.ShowPlayerHP.fillAmount,  _hpData.ShowHPFloat, 0.02f);
     }
 
-    public void HpHit()
+    public void HpHit(float GetDamage)
     {
-        _hpData.NowHP -= 10f;
+        _hpData.NowHP -= GetDamage;
     }
 }

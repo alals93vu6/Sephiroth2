@@ -34,7 +34,7 @@ public class GamePlayingManager : MonoBehaviour
 
     private void OnEnemyActor(OnEnemyActorDetected obj)
     {
-        _playerManager._playerFettle.HpHit();
+        //_playerManager._playerFettle.HpHit();
     }
 
     private void OnNewRound(NewRoundDetected obj)
@@ -46,7 +46,7 @@ public class GamePlayingManager : MonoBehaviour
     
     private void OnDefenseAttack(DefenseAttackDetected obj)
     {
-        Array.ForEach(_turntableGenerics,turnyable => turnyable.OnChoseDefense());
+        //Array.ForEach(_turntableGenerics,turnyable => turnyable.OnChoseDefense());
     }
     private void OnStopTruntable(StopTruntableDetected obj)
     {
