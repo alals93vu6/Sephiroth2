@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -26,9 +27,26 @@ public class LocationManager : MonoBehaviour
         PlayerLocation[4] = PlayerLocation[0];
     }
 
-    public void PlayerOnAttackDetected()
+    public void PlayerOnAttackDetected(float DamageNumber)
     {
+        int NowStrikeLocation;
         //判斷當前位置並選擇最前排傷害
+        if (PlayerLocation[0] != null)
+        {
+            NowStrikeLocation = 1;
+        }
+        else
+        {
+            if (PlayerLocation[1] != null)
+            {
+                NowStrikeLocation = 2;
+            }
+            else
+            {
+                NowStrikeLocation = 3;
+            }
+        }
+        Array.ForEach(PlayerLocation,OnStrike => OnStrike.OnHitDetected(NowStrikeLocation,DamageNumber));
     }
 
     private void StartSet()
