@@ -4,47 +4,7 @@ using Project.PlayerHpData;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerFettle : MonoBehaviour
+public class PlayerFettle : FettleGeneric
 {
-    [SerializeField] public HpData _hpData;
-    // Start is called before the first frame update
-    void Start()
-    {
-        _hpData.ShowPlayerHP = GameObject.Find("PlayerHpShow").GetComponent<Image>();
-        _hpData.NowHP =  _hpData.MaxHP;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            HpHit(10);  
-        }
-        _hpData.NowHP = Mathf.Clamp(_hpData.NowHP, 0, _hpData.MaxHP);
-        _hpData.ShowHPFloat =  _hpData.NowHP /  _hpData.MaxHP;
-        _hpData.ShowPlayerHP.fillAmount = Mathf.Lerp( _hpData.ShowPlayerHP.fillAmount,  _hpData.ShowHPFloat, 0.02f);
-    }
-
-    public void HpHit(float GetDamage)
-    {
-        if (_hpData.ArmorValue == 0)
-        {
-            _hpData.NowHP -= GetDamage;
-        }
-        else
-        {
-            if (GetDamage >= _hpData.ArmorValue)
-            {
-                _hpData.NowHP -= GetDamage - _hpData.ArmorValue;
-                _hpData.ArmorValue = 0f;
-            }
-            else
-            {
-                _hpData.ArmorValue -= GetDamage;
-            }
-        }
-
-        
-    }
+    
 }

@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class SummonerManager : MonoBehaviour
 {
-    [SerializeField] public SummonerFettle _summonerFettle;
+    [SerializeField] public FettleGeneric _summonerFettle;
 
     // Start is called before the first frame update
     private void Start()
