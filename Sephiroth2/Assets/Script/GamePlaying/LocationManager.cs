@@ -26,6 +26,11 @@ public class LocationManager : MonoBehaviour
         PlayerLocation[4] = PlayerLocation[0];
     }
 
+    public void PlayerOnAttackDetected()
+    {
+        //判斷當前位置並選擇最前排傷害
+    }
+
     private void StartSet()
     {
         

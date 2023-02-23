@@ -39,7 +39,7 @@ public class MonsterGeneric : MonoBehaviour
         if (AttackCD == 0)
         {
             AttackCD = AttackCycle;
-            Player._playerFettle.HpHit(AttackDamage);
+            Player._playerFettle.OnHitDetected(0,AttackDamage);
         }
         else
         {
