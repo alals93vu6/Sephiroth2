@@ -6,30 +6,35 @@ using UnityEngine;
 
 public class EventSummon : TurntableGeneric
 {
-    [SerializeField] public int ThisState;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    
+    [SerializeField] public int ThisNo;
+    [SerializeField] public bool IsSummon;
     public override void OnPointed()
     {
-        var OnSummon = FindObjectOfType<PlayerManager>();
-        if (OnSummon._turntable.SummonState == ThisState)
+        if (IsSummon)
         {
-            OnSummon.CauseDamage = 1;
-            EventBus.Post(new PlayerAttackDetected());
+            ChangeLocation();
         }
         else
         {
-            OnSummon._turntable.OnPlayerSummon(ThisState);
+            CheckIsFirst();
         }
+    }
+    private void ChangeLocation()
+    {
+        string thisSummonerName = ThisNo == 1 ? "TheSummonerA" : "TheSummonerB";
+        var ThisFettle = GameObject.Find(thisSummonerName).GetComponent<FettleGeneric>();
+        ThisFettle.OnChangeLocation();
+    }
+
+    private void CheckIsFirst()
+    {
+        var locationM = FindObjectOfType<LocationManager>();
+        var otherSummonerName = ThisNo == 1 ? "SummonB" : "SummonA";
+        var thisSummonerName = ThisNo == 1 ? "TheSummonerA" : "TheSummonerB";
+        var otherSummoner = GameObject.Find(otherSummonerName).GetComponent<EventSummon>();
+        var targetIndex = otherSummoner.IsSummon ? 2 : 0;
+        locationM.PlayerLocation[targetIndex] = GameObject.Find(thisSummonerName).GetComponent<FettleGeneric>();
+        locationM.PlayerLocation[targetIndex].StatyLocation = otherSummoner.IsSummon ? 3 : 1;
+        IsSummon = true;
     }
 }

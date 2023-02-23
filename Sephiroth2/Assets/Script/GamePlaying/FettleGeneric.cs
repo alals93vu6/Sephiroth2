@@ -38,6 +38,11 @@ public class FettleGeneric : MonoBehaviour
         }
     }
 
+    public virtual void OnChangeLocation()
+    {
+        
+    }
+
     public virtual void OnHitDetected(int NowLocationnumber,float DamageNumber)
     {
         if (StatyLocation == NowLocationnumber)

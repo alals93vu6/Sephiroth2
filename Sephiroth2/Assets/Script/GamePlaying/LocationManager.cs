@@ -29,8 +29,8 @@ public class LocationManager : MonoBehaviour
 
     public void PlayerOnAttackDetected(float DamageNumber)
     {
-        int NowStrikeLocation;
-        //判斷當前位置並選擇最前排傷害
+        /*
+         int NowStrikeLocation;
         if (PlayerLocation[0] != null)
         {
             NowStrikeLocation = 1;
@@ -46,11 +46,22 @@ public class LocationManager : MonoBehaviour
                 NowStrikeLocation = 3;
             }
         }
+        */
+        int NowStrikeLocation = 1;
+        for (int i = 0; i < PlayerLocation.Length; i++)
+        {
+            if (PlayerLocation[i] != null)
+            {
+                NowStrikeLocation = i + 1;
+                break;
+            }
+        }
         Array.ForEach(PlayerLocation,OnStrike => OnStrike.OnHitDetected(NowStrikeLocation,DamageNumber));
     }
 
     private void StartSet()
     {
-        
+        PlayerLocation[1] = GameObject.Find("PlayerManager").GetComponent<FettleGeneric>();
+        PlayerLocation[1].StatyLocation = 2;
     }
 }

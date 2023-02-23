@@ -3477,7 +3477,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsChess: 0
   Tagged: 0
-  ThisState: 1
+  ThisNo: 1
 --- !u!1 &1543889115
 GameObject:
   m_ObjectHideFlags: 0
@@ -4030,7 +4030,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsChess: 0
   Tagged: 0
-  ThisState: 2
+  ThisNo: 2
 --- !u!1 &1838486833
 GameObject:
   m_ObjectHideFlags: 0
@@ -4063,6 +4063,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hpData: {fileID: 11400000, guid: fc413562051471343b72d2672e6f8436, type: 2}
+  StatyLocation: 0
 --- !u!4 &1838486835
 Transform:
   m_ObjectHideFlags: 0
@@ -4695,6 +4696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hpData: {fileID: 11400000, guid: 11eba9bd20afa3f48a4e56232cd3a3ba, type: 2}
+  StatyLocation: 0
 --- !u!114 &3039457959184084899
 MonoBehaviour:
   m_ObjectHideFlags: 0
