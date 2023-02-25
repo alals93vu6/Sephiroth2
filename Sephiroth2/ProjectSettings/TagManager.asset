@@ -9,6 +9,7 @@ TagManager:
   - Summoner
   - SummonerTurntable
   - Map
+  - Next_Map_Button
   layers:
   - Default
   - TransparentFX

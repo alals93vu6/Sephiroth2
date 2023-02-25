@@ -9,10 +9,11 @@ public class Map_System : MonoBehaviour
     [SerializeField] public GameObject[] Map;
     //00 是起始地圖
     //05 是小黑房間
+    [Header("黑幕物件")]
     [SerializeField] public GameObject shady;
     [SerializeField] public static bool is_next_map = false;
+    [SerializeField] public int Map_level = 0;
     int new_map;
-    public static bool is_black_map = false;
     public static int old_a = 0;
     // Start is called before the first frame update
     void Start()
@@ -24,9 +25,9 @@ public class Map_System : MonoBehaviour
     void Update()
     {
         Debug.Log(is_next_map);
+        Debug.Log(Map_level);
         load_test();
-        next_basic_map();
-        next_black_map();
+        next_basic_map(2);
     }
 
     void load_Map(int new_a)
@@ -73,26 +74,25 @@ public class Map_System : MonoBehaviour
         foreach (GameObject oneObject in destroyObject)
             Destroy(oneObject);
     }
-    void next_basic_map()
+    void next_basic_map(int black_level)
     {
-        if (is_next_map)
+        if (Map_level == black_level)
+        {
+            load_Map(5);
+            load_Map(5);
+            Map_level++;
+        }
+        if (is_next_map && Map_level != black_level)
         {
             new_map = Random.Range(1, 5);
             load_Map(new_map);
             load_Map(new_map);
-        }
-    }
-    void next_black_map()
-    {
-        if (is_black_map)
-        {
-            load_Map(5);
-            load_Map(5);
-            is_black_map = false;
+            Map_level++;
         }
     }
     public void is_next_map_button()
     {
         is_next_map = true;
     }
+
 }
