@@ -6,5 +6,8 @@ using UnityEngine.UI;
 
 public class PlayerFettle : FettleGeneric
 {
-    
+    public override void OnStart()
+    {
+        base.OnStart();
+    }
 }

@@ -27,7 +27,21 @@ public class FettleGeneric : MonoBehaviour
 
     public virtual void OnStart()
     {
-        _hpData.ShowPlayerHP = GameObject.Find("PlayerHpShow").GetComponent<Image>();
+        if (StatyLocation == 1)
+        {
+            _hpData.ShowPlayerHP = GameObject.Find("PlayerHpShow").GetComponent<Image>();
+        }
+        
+        if (StatyLocation == 3)
+        {
+            _hpData.ShowPlayerHP = GameObject.Find("SummonAHpShow").GetComponent<Image>();
+        }
+        
+        if (StatyLocation == 4)
+        {
+            _hpData.ShowPlayerHP = GameObject.Find("SummonBHpShow").GetComponent<Image>();
+        }
+        //_hpData.ShowPlayerHP = GameObject.Find("PlayerHpShow").GetComponent<Image>();
     }
 
     public virtual void OnUpdate()

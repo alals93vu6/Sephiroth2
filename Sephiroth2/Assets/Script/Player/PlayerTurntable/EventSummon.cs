@@ -35,6 +35,8 @@ public class EventSummon : TurntableGeneric
         var targetIndex = otherSummoner.IsSummon ? 2 : 0;
         locationM.PlayerLocation[targetIndex] = GameObject.Find(thisSummonerName).GetComponent<FettleGeneric>();
         locationM.PlayerLocation[targetIndex].StatyLocation = otherSummoner.IsSummon ? 2 : 0;
+        
         IsSummon = true;
     }
+    
 }

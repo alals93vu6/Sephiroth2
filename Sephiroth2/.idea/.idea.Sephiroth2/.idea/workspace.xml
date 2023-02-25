@@ -5,7 +5,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sephiroth2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sephiroth2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/GamePlaying/FettleGeneric.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GamePlaying/FettleGeneric.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerFettle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/PlayerFettle.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerTurntable/EventSummon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/PlayerTurntable/EventSummon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/Summoner/Attacker_Wolf/Wolf.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/Summoner/Attacker_Wolf/Wolf.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/Summoner/Attacker_Wolf/WolfFettle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/Summoner/Attacker_Wolf/WolfFettle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/Summoner/Support_Owl/Owl.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/Summoner/Support_Owl/Owl.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/Summoner/Support_Owl/OwlFettle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/Summoner/Support_Owl/OwlFettle.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
