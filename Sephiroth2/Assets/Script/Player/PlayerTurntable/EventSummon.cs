@@ -22,8 +22,8 @@ public class EventSummon : TurntableGeneric
     private void ChangeLocation()
     {
         string thisSummonerName = ThisNo == 1 ? "TheSummonerA" : "TheSummonerB";
-        var ThisFettle = GameObject.Find(thisSummonerName).GetComponent<FettleGeneric>();
-        ThisFettle.OnSetLocation();
+        var thisFettle = GameObject.Find(thisSummonerName).GetComponent<FettleGeneric>();
+        thisFettle.OnSetLocation();
     }
 
     private void CheckIsFirst()

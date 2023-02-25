@@ -42,8 +42,12 @@ public class FettleGeneric : MonoBehaviour
     {
         var PlayerLC = FindObjectOfType<PlayerFettle>();
         var LocationM = FindObjectOfType<LocationManager>();
+        int ramNumber;
         LocationM.PlayerNowLocation[0] = PlayerLC.StatyLocation;
         LocationM.PlayerNowLocation[1] = this.StatyLocation;
+        ramNumber = LocationM.PlayerNowLocation[0];
+        PlayerLC.StatyLocation = this.StatyLocation;
+        this.StatyLocation = ramNumber;
         LocationM.OnChangeLocation();
     }
 
