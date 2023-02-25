@@ -24,7 +24,10 @@ public class LocationManager : MonoBehaviour
 
     public void OnChangeLocation()
     {
-        PlayerLocation[4] = PlayerLocation[0];
+        PlayerLocation[3] = PlayerLocation[PlayerNowLocation[0]];
+        PlayerLocation[4] = PlayerLocation[PlayerNowLocation[1]];
+        PlayerLocation[PlayerNowLocation[0]] = PlayerLocation[4];
+        PlayerLocation[PlayerNowLocation[1]] = PlayerLocation[3];
     }
 
     public void PlayerOnAttackDetected(float DamageNumber)
@@ -62,6 +65,6 @@ public class LocationManager : MonoBehaviour
     private void StartSet()
     {
         PlayerLocation[1] = GameObject.Find("PlayerManager").GetComponent<FettleGeneric>();
-        PlayerLocation[1].StatyLocation = 2;
+        PlayerLocation[1].StatyLocation = 1;
     }
 }

@@ -38,9 +38,13 @@ public class FettleGeneric : MonoBehaviour
         }
     }
 
-    public virtual void OnChangeLocation()
+    public virtual void OnSetLocation()
     {
-        
+        var PlayerLC = FindObjectOfType<PlayerFettle>();
+        var LocationM = FindObjectOfType<LocationManager>();
+        LocationM.PlayerNowLocation[0] = PlayerLC.StatyLocation;
+        LocationM.PlayerNowLocation[1] = this.StatyLocation;
+        LocationM.OnChangeLocation();
     }
 
     public virtual void OnHitDetected(int NowLocationnumber,float DamageNumber)

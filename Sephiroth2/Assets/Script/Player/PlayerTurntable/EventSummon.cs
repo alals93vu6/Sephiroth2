@@ -23,7 +23,7 @@ public class EventSummon : TurntableGeneric
     {
         string thisSummonerName = ThisNo == 1 ? "TheSummonerA" : "TheSummonerB";
         var ThisFettle = GameObject.Find(thisSummonerName).GetComponent<FettleGeneric>();
-        ThisFettle.OnChangeLocation();
+        ThisFettle.OnSetLocation();
     }
 
     private void CheckIsFirst()
@@ -34,7 +34,7 @@ public class EventSummon : TurntableGeneric
         var otherSummoner = GameObject.Find(otherSummonerName).GetComponent<EventSummon>();
         var targetIndex = otherSummoner.IsSummon ? 2 : 0;
         locationM.PlayerLocation[targetIndex] = GameObject.Find(thisSummonerName).GetComponent<FettleGeneric>();
-        locationM.PlayerLocation[targetIndex].StatyLocation = otherSummoner.IsSummon ? 3 : 1;
+        locationM.PlayerLocation[targetIndex].StatyLocation = otherSummoner.IsSummon ? 2 : 0;
         IsSummon = true;
     }
 }
