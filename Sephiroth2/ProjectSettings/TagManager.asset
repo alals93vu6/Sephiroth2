@@ -8,6 +8,7 @@ TagManager:
   - PointerReset
   - Summoner
   - SummonerTurntable
+  - Map
   layers:
   - Default
   - TransparentFX
