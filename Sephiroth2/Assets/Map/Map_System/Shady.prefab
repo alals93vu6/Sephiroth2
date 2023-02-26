@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 1650934077942266155}
   - component: {fileID: -5614139053559334494}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Shady
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

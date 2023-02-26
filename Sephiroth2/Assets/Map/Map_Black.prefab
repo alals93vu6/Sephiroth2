@@ -82,6 +82,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 335904273076457682}
+  - component: {fileID: 1151253686804379698}
   m_Layer: 0
   m_Name: Map_Black
   m_TagString: Map
@@ -106,6 +107,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1151253686804379698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335904273076457681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 021a5f11c3a7eda4d8a5744c77a1eac6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 7854569244742076229}
 --- !u!1 &335904273479588725
 GameObject:
   m_ObjectHideFlags: 0

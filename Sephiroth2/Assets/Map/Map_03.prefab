@@ -886,6 +886,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6255821698699170769}
+  - component: {fileID: 895608104658634303}
   m_Layer: 0
   m_Name: Map_03
   m_TagString: Map
@@ -910,6 +911,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &895608104658634303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6255821698699170774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 021a5f11c3a7eda4d8a5744c77a1eac6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 5720523796084290353}
 --- !u!1 &6255821698834664996
 GameObject:
   m_ObjectHideFlags: 0
