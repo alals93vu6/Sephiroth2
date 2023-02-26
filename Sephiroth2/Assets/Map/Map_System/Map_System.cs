@@ -26,6 +26,7 @@ public class Map_System : MonoBehaviour
 
     int new_map;
     public static int old_a = 0;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -35,10 +36,10 @@ public class Map_System : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(is_next_map);
-        Debug.Log(Map_level);
+        //Debug.Log(is_next_map);
+        // Debug.Log(Map_level);
         load_test();
-        next_basic_map(1);
+        next_basic_map(1, 4, 9);
     }
 
     void load_Map(int new_a)
@@ -51,7 +52,7 @@ public class Map_System : MonoBehaviour
         is_next_map = false;
     }
 
-    void load_test()
+    void load_test() //測試用
     {
         if (Input.GetKeyDown(KeyCode.Alpha0))
         {
@@ -78,29 +79,33 @@ public class Map_System : MonoBehaviour
             load_Map(5);
         }
     }
-    void DestroyWithTag(string destroyTag)
+    void DestroyWithTag(string destroyTag) //刪除地圖物件
     {
         GameObject[] destroyObject;
         destroyObject = GameObject.FindGameObjectsWithTag(destroyTag);
         foreach (GameObject oneObject in destroyObject)
             Destroy(oneObject);
     }
-    void next_basic_map(int black_level)
+    void next_basic_map(int black_level, int recover_level, int boss_level) // set_level
     {
         if (is_next_map)
         {
             if (Map_level != black_level) //一般戰鬥
             {
                 map_reader(false, true, false, false, false);
-                if (Map_level % 4 == 0)
+
+                if (Map_level % recover_level == 0)//恢復點
                 {
                     map_reader(false, false, false, true, false);
                     Instantiate(recover);
                 }
-                if (Map_level == 9)
+
+                if (Map_level == boss_level) //Boss房間
                 {
+                    Debug.Log("Boss_level");
                     map_reader(false, false, false, false, true);
                 }
+
                 new_map = Random.Range(1, 5);
                 load_Map(new_map);
                 load_Map(new_map);
@@ -114,9 +119,8 @@ public class Map_System : MonoBehaviour
                 Map_level++;
             }
         }
-
     }
-    public void is_next_map_button()
+    public void is_next_map_button() //按鈕執行用
     {
         is_next_map = true;
     }
