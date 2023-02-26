@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -11,8 +11,19 @@ public class Map_System : MonoBehaviour
     //05 是小黑房間
     [Header("黑幕物件")]
     [SerializeField] public GameObject shady;
+    [Header("篝火物件")]
+    [SerializeField] public GameObject recover;
     [SerializeField] public static bool is_next_map = false;
-    [SerializeField] public int Map_level = 0;
+    [SerializeField] public static int Map_level = 0;
+
+    [Header("地圖狀態")]
+    [SerializeField] public static bool Start_map = true;
+    [SerializeField] public static bool Basic_map = false;
+    [SerializeField] public static bool Black_map = false;
+    [SerializeField] public static bool Recover_map = false;
+    [SerializeField] public static bool Boss_map = false;
+
+
     int new_map;
     public static int old_a = 0;
     // Start is called before the first frame update
@@ -27,7 +38,7 @@ public class Map_System : MonoBehaviour
         Debug.Log(is_next_map);
         Debug.Log(Map_level);
         load_test();
-        next_basic_map(2);
+        next_basic_map(1);
     }
 
     void load_Map(int new_a)
@@ -76,23 +87,45 @@ public class Map_System : MonoBehaviour
     }
     void next_basic_map(int black_level)
     {
-        if (Map_level == black_level)
+        if (is_next_map)
         {
-            load_Map(5);
-            load_Map(5);
-            Map_level++;
+            if (Map_level != black_level) //一般戰鬥
+            {
+                map_reader(false, true, false, false, false);
+                if (Map_level % 4 == 0)
+                {
+                    map_reader(false, false, false, true, false);
+                    Instantiate(recover);
+                }
+                if (Map_level == 9)
+                {
+                    map_reader(false, false, false, false, true);
+                }
+                new_map = Random.Range(1, 5);
+                load_Map(new_map);
+                load_Map(new_map);
+                Map_level++;
+            }
+            if (Map_level == black_level)//小黑取得
+            {
+                map_reader(false, false, true, false, false);
+                load_Map(5);
+                load_Map(5);
+                Map_level++;
+            }
         }
-        if (is_next_map && Map_level != black_level)
-        {
-            new_map = Random.Range(1, 5);
-            load_Map(new_map);
-            load_Map(new_map);
-            Map_level++;
-        }
+
     }
     public void is_next_map_button()
     {
         is_next_map = true;
     }
-
+    void map_reader(bool start, bool basic, bool black, bool recover, bool boss)
+    {
+        Start_map = start;
+        Basic_map = basic;
+        Black_map = black;
+        Recover_map = recover;
+        Boss_map = boss;
+    }
 }

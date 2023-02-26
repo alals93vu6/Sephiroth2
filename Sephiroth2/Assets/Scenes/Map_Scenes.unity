@@ -449,6 +449,12 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 3463730795531391695, guid: 3d4bbcce81ef2934db9df3d5ac7ed3bf,
         type: 3}
+      propertyPath: recover
+      value: 
+      objectReference: {fileID: 6745493546370599282, guid: c4a696c19e1ca9a458738987cba8fcdf,
+        type: 3}
+    - target: {fileID: 3463730795531391695, guid: 3d4bbcce81ef2934db9df3d5ac7ed3bf,
+        type: 3}
       propertyPath: is_next_map
       value: 0
       objectReference: {fileID: 0}
