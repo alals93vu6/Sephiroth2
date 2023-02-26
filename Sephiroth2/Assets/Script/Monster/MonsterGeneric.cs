@@ -35,11 +35,11 @@ public class MonsterGeneric : MonoBehaviour
 
     public virtual void OnPassRound()
     {
-        var Player = FindObjectOfType<PlayerManager>();
+        var StrikeTarget = FindObjectOfType<LocationManager>();
         if (AttackCD == 0)
         {
             AttackCD = AttackCycle;
-            Player._playerFettle.OnHitDetected(0,AttackDamage);
+            StrikeTarget.PlayerOnAttackDetected(AttackDamage);
         }
         else
         {

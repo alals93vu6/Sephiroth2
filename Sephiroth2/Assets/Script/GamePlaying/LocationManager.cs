@@ -32,24 +32,26 @@ public class LocationManager : MonoBehaviour
 
     public void PlayerOnAttackDetected(float DamageNumber)
     {
-        /*
-         int NowStrikeLocation;
+        
+        int NowStrikeLocation;
         if (PlayerLocation[0] != null)
         {
-            NowStrikeLocation = 1;
+            NowStrikeLocation = 0;
         }
         else
         {
             if (PlayerLocation[1] != null)
             {
-                NowStrikeLocation = 2;
+                NowStrikeLocation = 1;
             }
             else
             {
-                NowStrikeLocation = 3;
+                NowStrikeLocation = 2;
             }
         }
-        */
+        
+        PlayerLocation[NowStrikeLocation].OnHit(DamageNumber);
+        /*
         int NowStrikeLocation = 1;
         for (int i = 0; i < PlayerLocation.Length; i++)
         {
@@ -59,7 +61,8 @@ public class LocationManager : MonoBehaviour
                 break;
             }
         }
-        Array.ForEach(PlayerLocation,OnStrike => OnStrike.OnHitDetected(NowStrikeLocation,DamageNumber));
+        PlayerLocation[NowStrikeLocation]
+        */
     }
 
     private void StartSet()
