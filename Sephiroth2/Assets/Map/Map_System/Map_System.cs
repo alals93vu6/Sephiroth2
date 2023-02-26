@@ -26,7 +26,7 @@ public class Map_System : MonoBehaviour
 
     int new_map;
     public static int old_a = 0;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,7 +48,7 @@ public class Map_System : MonoBehaviour
         Instantiate(Map[old_a]);
         Instantiate(shady);
         old_a = new_a;
-        Debug.Log(new_a);
+        // Debug.Log(new_a);
         is_next_map = false;
     }
 
@@ -96,6 +96,7 @@ public class Map_System : MonoBehaviour
 
                 if (Map_level % recover_level == 0)//恢復點
                 {
+                    Debug.Log("Recover_level");
                     map_reader(false, false, false, true, false);
                     Instantiate(recover);
                 }

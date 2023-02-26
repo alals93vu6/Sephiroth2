@@ -15,12 +15,9 @@ public class SetActiveButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(is_end);
+        // Debug.Log(is_end);
         SHOWHIDE();
-        if (Input.GetKeyDown(KeyCode.N))
-        {
-            is_end = true;
-        }
+        test(KeyCode.N);
     }
     void SHOWHIDE()
     {
@@ -31,6 +28,13 @@ public class SetActiveButton : MonoBehaviour
         else
         {
             button.SetActive(true);
+        }
+    }
+    void test(KeyCode key) // 切換按鈕狀態
+    {
+        if (Input.GetKeyDown(key))
+        {
+            is_end = true;
         }
     }
 }
