@@ -92,23 +92,4 @@ public class FettleGeneric : MonoBehaviour
             }
         }
     }
-    /*
-     var HitCheck = FindObjectOfType<LocationManager>();
-        if (HitCheck.PlayerLocation[0] != null)
-        {
-            HitCheck.PlayerLocation[0].OnHit(DamageNumber);
-        }
-        else
-        {
-            if (HitCheck.PlayerLocation[1] != null)
-            {
-                HitCheck.PlayerLocation[1].OnHit(DamageNumber);
-            }
-            else
-            {
-                HitCheck.PlayerLocation[2].OnHit(DamageNumber);
-            }
-        }
-     */
-    
 }

@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a91af2bd-aa7a-469b-a1f3-851aab1851a3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Sephiroth2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sephiroth2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/GamePlaying/FettleGeneric.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GamePlaying/FettleGeneric.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/GamePlaying/LocationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GamePlaying/LocationManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Monster/MonsterGeneric.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Monster/MonsterGeneric.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/Fettle/Player.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/Fettle/Player.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/Summoner/Support_Owl/Owl.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/Summoner/Support_Owl/Owl.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +120,7 @@
       <workItem from="1677000795410" duration="1149000" />
       <workItem from="1677165513608" duration="14319000" />
       <workItem from="1677327330744" duration="5462000" />
-      <workItem from="1677423919939" duration="403000" />
+      <workItem from="1677423919939" duration="2224000" />
     </task>
     <servers />
   </component>

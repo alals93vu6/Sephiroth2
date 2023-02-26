@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Owl
   m_EditorClassIdentifier: 
   ShowPlayerHP: {fileID: 0}
-  ShowHPFloat: NaN
+  ShowHPFloat: 1
   MaxHP: 120
-  NowHP: 0
+  NowHP: 120
   ArmorValue: 0
   ArmorDefense: 3

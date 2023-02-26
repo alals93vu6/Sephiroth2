@@ -8,6 +8,7 @@ public class LocationManager : MonoBehaviour
     [SerializeField] public FettleGeneric[] PlayerLocation;
     [SerializeField] public int[] PlayerNowLocation;
     [SerializeField] public MonsterGeneric[] MonsterLocation;
+    [SerializeField] private Transform P1, P2, P3, E1, E2, E3;
 
     
     // Start is called before the first frame update
@@ -19,7 +20,7 @@ public class LocationManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        DisplayChangeLocation();
     }
 
     public void OnChangeLocation()
@@ -32,7 +33,6 @@ public class LocationManager : MonoBehaviour
 
     public void PlayerOnAttackDetected(float DamageNumber)
     {
-        
         int NowStrikeLocation;
         if (PlayerLocation[0] != null)
         {
@@ -49,25 +49,28 @@ public class LocationManager : MonoBehaviour
                 NowStrikeLocation = 2;
             }
         }
-        
         PlayerLocation[NowStrikeLocation].OnHit(DamageNumber);
-        /*
-        int NowStrikeLocation = 1;
-        for (int i = 0; i < PlayerLocation.Length; i++)
-        {
-            if (PlayerLocation[i] != null)
-            {
-                NowStrikeLocation = i + 1;
-                break;
-            }
-        }
-        PlayerLocation[NowStrikeLocation]
-        */
     }
 
     private void StartSet()
     {
         PlayerLocation[1] = GameObject.Find("PlayerManager").GetComponent<FettleGeneric>();
         PlayerLocation[1].StatyLocation = 1;
+    }
+
+    private void DisplayChangeLocation()
+    {
+        if (PlayerLocation[0] != null)
+        {
+            PlayerLocation[0].transform.position = Vector3.Lerp(PlayerLocation[0].transform.position,P1.position,0.05f);
+        }
+        if (PlayerLocation[1] != null)
+        {
+            PlayerLocation[1].transform.position = Vector3.Lerp(PlayerLocation[1].transform.position,P2.position,0.05f);
+        }
+        if (PlayerLocation[2] != null)
+        {
+            PlayerLocation[2].transform.position = Vector3.Lerp(PlayerLocation[2].transform.position,P3.position,0.05f);
+        }
     }
 }
