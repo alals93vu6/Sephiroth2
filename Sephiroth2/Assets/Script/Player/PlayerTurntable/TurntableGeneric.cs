@@ -6,7 +6,6 @@ using UnityEngine;
 public class TurntableGeneric : MonoBehaviour
 {
     [SerializeField] public bool IsChess;
-    [SerializeField] public bool Tagged;
     void Start()
     {
         

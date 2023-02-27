@@ -8,8 +8,6 @@ public class GameUIManager : MonoBehaviour
     [SerializeField] private PlayerManager _playerManager;
 
     [SerializeField] private GameObject ActorObj;
-    [SerializeField] private GameObject DefencsobjA;
-    [SerializeField] private GameObject DefencsobjB;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +18,6 @@ public class GameUIManager : MonoBehaviour
     void Update()
     {
         ShowActorPoints();
-        ShowDefecnePoints();
     }
 
     private void ShowActorPoints()
@@ -34,23 +31,5 @@ public class GameUIManager : MonoBehaviour
             ActorObj.SetActive(false);
         }
     }
-
-    private void ShowDefecnePoints()
-    {
-        if (_playerManager._playerActor.RemainingDefense == 3)
-        {
-            DefencsobjA.SetActive(true);
-            DefencsobjB.SetActive(true);
-        }
-        else if (_playerManager._playerActor.RemainingDefense == 2)
-        {
-            DefencsobjA.SetActive(false);
-            DefencsobjB.SetActive(true);
-        }
-        else
-        {
-            DefencsobjA.SetActive(false);
-            DefencsobjB.SetActive(false);
-        }
-    }
+    
 }
