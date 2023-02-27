@@ -49,14 +49,13 @@ public class EventSummon : TurntableGeneric
         {
             Turntable.SummonerTurntable[0].SetActive(true);
             UI.TurntableUI[0].SetActive(true);
-            Debug.Log("A");
         }
         else
         {
             Turntable.SummonerTurntable[1].SetActive(true);
             UI.TurntableUI[1].SetActive(true);
-            Debug.Log("B");
         }
+        EventBus.Post(new PlayerOnSummonDetected());
     }
 
 }

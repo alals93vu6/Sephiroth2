@@ -27,6 +27,12 @@ public class GamePlayingManager : MonoBehaviour
         EventBus.Subscribe<OnEnemyActorDetected>(OnEnemyActor);
         EventBus.Subscribe<PlayerAttackDetected>(OnPlayerAttack);
         EventBus.Subscribe<DefenseAttackDetected>(OnDefenseAttack);
+        EventBus.Subscribe<PlayerOnSummonDetected>(OnPlayerSummon);
+    }
+
+    private void OnPlayerSummon(PlayerOnSummonDetected obj)
+    {
+        ReLoadEventTuntable();
     }
 
     private void OnPlayerAttack(PlayerAttackDetected obj)
