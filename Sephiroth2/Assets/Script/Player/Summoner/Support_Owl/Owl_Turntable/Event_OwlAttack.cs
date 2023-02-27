@@ -1,18 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Project;
+using Project.Event;
 using UnityEngine;
 
-public class Event_OwlAttack : MonoBehaviour
+public class Event_OwlAttack : TurntableGeneric
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void OnPointed()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        var AttackNumber = FindObjectOfType<PlayerManager>();
+        AttackNumber.CauseDamage = 1;
+        EventBus.Post(new PlayerAttackDetected());
     }
 }

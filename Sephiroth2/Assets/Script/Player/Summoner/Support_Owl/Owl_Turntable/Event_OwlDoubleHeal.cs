@@ -2,17 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Event_OwlDoubleHeal : MonoBehaviour
+public class Event_OwlDoubleHeal : TurntableGeneric
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void OnPointed()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        var CheckBool = FindObjectOfType<OwlFettle>();
+        if (!CheckBool.DoubleReady)
+        {
+            CheckBool.DoubleReady = true;
+        }
     }
 }

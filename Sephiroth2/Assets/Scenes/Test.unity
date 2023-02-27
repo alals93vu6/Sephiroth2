@@ -924,9 +924,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 258352167}
-  - component: {fileID: 258352170}
   - component: {fileID: 258352169}
   - component: {fileID: 258352168}
+  - component: {fileID: 258352170}
   m_Layer: 0
   m_Name: Owl_Heal_FremostA
   m_TagString: Untagged
@@ -1003,7 +1003,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 258352166}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccb6fa019ba1cda409e373e7a74ba8b3, type: 3}
+  m_Script: {fileID: 11500000, guid: 47fe8be3b6d06214790576f48970caa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   IsChess: 0
@@ -2418,9 +2418,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 549739578}
-  - component: {fileID: 549739581}
   - component: {fileID: 549739580}
   - component: {fileID: 549739579}
+  - component: {fileID: 549739581}
   m_Layer: 0
   m_Name: Owl_DoubleHeal
   m_TagString: Untagged
@@ -2462,8 +2462,8 @@ EdgeCollider2D:
   - {x: -3.7273526, y: 8.749964}
   - {x: -4.291525, y: 8.549919}
   - {x: -4.598523, y: 8.333232}
-  - {x: -4.7872305, y: 8.133205}
-  - {x: -3.8460994, y: 6.6952343}
+  - {x: -5.088592, y: 8.138686}
+  - {x: -4.1926165, y: 6.5040236}
   - {x: -2.9979627, y: 7.0725603}
   - {x: -3.6867158, y: 8.606206}
 --- !u!50 &549739580
@@ -2496,7 +2496,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 549739577}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccb6fa019ba1cda409e373e7a74ba8b3, type: 3}
+  m_Script: {fileID: 11500000, guid: 743dfc80f9fc2904882427502576a040, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   IsChess: 0
@@ -2664,9 +2664,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 603002288}
-  - component: {fileID: 603002291}
   - component: {fileID: 603002290}
   - component: {fileID: 603002289}
+  - component: {fileID: 603002291}
   m_Layer: 0
   m_Name: Owl_HealEveryone
   m_TagString: Untagged
@@ -2741,7 +2741,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 603002287}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccb6fa019ba1cda409e373e7a74ba8b3, type: 3}
+  m_Script: {fileID: 11500000, guid: 7647f98b385620149a5bec541ce038b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   IsChess: 0
@@ -3797,8 +3797,8 @@ Transform:
   - {fileID: 549739578}
   - {fileID: 603002288}
   - {fileID: 2010425558}
-  - {fileID: 790449412}
   - {fileID: 2054998227}
+  - {fileID: 790449412}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3885,11 +3885,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 790449412}
-  - component: {fileID: 790449415}
   - component: {fileID: 790449414}
   - component: {fileID: 790449413}
+  - component: {fileID: 790449415}
   m_Layer: 0
-  m_Name: Owl_Heal_FremostB
+  m_Name: Owl_HealMin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3907,7 +3907,7 @@ Transform:
   m_LocalScale: {x: 0.26637998, y: 0.26637998, z: 0.26637998}
   m_Children: []
   m_Father: {fileID: 758989913}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!68 &790449413
 EdgeCollider2D:
@@ -3964,10 +3964,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 790449411}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccb6fa019ba1cda409e373e7a74ba8b3, type: 3}
+  m_Script: {fileID: 11500000, guid: 20efcf892d41c744c91f2efeebba3165, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   IsChess: 0
+  MinNumber: 0
 --- !u!1 &825144391
 GameObject:
   m_ObjectHideFlags: 0
@@ -6900,6 +6901,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hpData: {fileID: 11400000, guid: e7c3eead8a68c4a46a9f37e66d82b83f, type: 2}
   StatyLocation: 4
+  DoubleReady: 0
 --- !u!114 &1652692882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7998,7 +8000,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -63.9, y: -29.5}
+  m_AnchoredPosition: {x: -69.2, y: 19.3}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1990053011
@@ -8155,7 +8157,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2010425557}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccb6fa019ba1cda409e373e7a74ba8b3, type: 3}
+  m_Script: {fileID: 11500000, guid: 57c8a790831c45146b80f94efa3d8a4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   IsChess: 0
@@ -8370,11 +8372,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2054998227}
-  - component: {fileID: 2054998230}
   - component: {fileID: 2054998229}
   - component: {fileID: 2054998228}
+  - component: {fileID: 2054998230}
   m_Layer: 0
-  m_Name: Owl_HealMin
+  m_Name: Owl_Heal_FremostB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8392,7 +8394,7 @@ Transform:
   m_LocalScale: {x: 0.26637998, y: 0.26637998, z: 0.26637998}
   m_Children: []
   m_Father: {fileID: 758989913}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!68 &2054998228
 EdgeCollider2D:
@@ -8449,7 +8451,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2054998226}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccb6fa019ba1cda409e373e7a74ba8b3, type: 3}
+  m_Script: {fileID: 11500000, guid: 47fe8be3b6d06214790576f48970caa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   IsChess: 0
@@ -8554,7 +8556,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -69.8, y: 17.2}
+  m_AnchoredPosition: {x: -61.7, y: -31.2}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2122373378
@@ -8610,7 +8612,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &2140537664
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -2,17 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Event_OwlEveryOneHeal : MonoBehaviour
+public class Event_OwlEveryOneHeal : TurntableGeneric
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void OnPointed()
     {
-        
-    }
+        var HealTarget = FindObjectOfType<LocationManager>();
+        var IsDouble = FindObjectOfType<OwlFettle>();
+        float HealNumber = IsDouble.DoubleReady == true ? 4 : 2;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        for (int i = 0; i < 3; i++)
+        {
+            if (HealTarget.PlayerLocation[i] != null)
+            {
+                HealTarget.PlayerLocation[i]._hpData.NowHP += HealNumber;
+            }
+        }
     }
 }
