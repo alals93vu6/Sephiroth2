@@ -37,6 +37,26 @@ public class EventSummon : TurntableGeneric
         locationM.PlayerLocation[targetIndex].StatyLocation = otherSummoner.IsSummon ? 2 : 0;
         
         IsSummon = true;
+        SummonEvent();
     }
-    
+
+    private void SummonEvent()
+    {
+        var Turntable = FindObjectOfType<TurntableManager>();
+        var UI = FindObjectOfType<GameUIManager>();
+
+        if (ThisNo == 1)
+        {
+            Turntable.SummonerTurntable[0].SetActive(true);
+            UI.TurntableUI[0].SetActive(true);
+            Debug.Log("A");
+        }
+        else
+        {
+            Turntable.SummonerTurntable[1].SetActive(true);
+            UI.TurntableUI[1].SetActive(true);
+            Debug.Log("B");
+        }
+    }
+
 }

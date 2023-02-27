@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Data.Util;
 using UnityEngine;
 
 public class TurntableManager : MonoBehaviour
@@ -7,6 +8,7 @@ public class TurntableManager : MonoBehaviour
     [Header("物件")]
     [SerializeField] public int SummonState;
     [SerializeField] public GameObject[] Summoner;
+    [SerializeField] public GameObject[] SummonerTurntable;
     //[SerializeField] public GameObject[] SummonerTurntable;
     [Header("Offset")]
     [SerializeField] private Vector3 SummonerOffset;
@@ -17,6 +19,8 @@ public class TurntableManager : MonoBehaviour
         OnPlayerSummon(0);
         PlayerPrefs.SetInt("NowSummonA",1);
         PlayerPrefs.SetInt("NowSummonB",2);
+        SummonerTurntable[0].SetActive(false);
+        SummonerTurntable[1].SetActive(false);
     }
 
     // Update is called once per frame
