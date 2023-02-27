@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a91af2bd-aa7a-469b-a1f3-851aab1851a3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Sephiroth2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sephiroth2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerTurntable/EventBlue.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerTurntable/EventBlue.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerTurntable/EventPenaity.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerTurntable/EventPenaity.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerTurntable/EventRed.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerTurntable/EventRed.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerTurntable/EventYellow.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerTurntable/EventYellow.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerTurntable/TurntableGeneric.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerTurntable/TurntableGeneric.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/GamePlaying/GamePlayingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GamePlaying/GamePlayingManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerTurntable/EventDefense.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/PlayerTurntable/EventDefense.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/Summoner/Attacker_Wolf/Wolf.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/Summoner/Attacker_Wolf/Wolf.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/Summoner/Attacker_Wolf/WolfFettle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/Summoner/Attacker_Wolf/WolfFettle.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +28,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Script/Player/PlayerState/WaitRound.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Player/PlayerTurntable/EventAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Player/PlayerTurntable/EventHeal.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Player/Summoner/Attacker_Wolf/Wolf_Turntable/Event_WolfDefnse.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Player/Summoner/SummonerFettle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Player/Summoner/SummonerManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Player/Summoner/Support_Owl/OwlFettle.cs" root0="FORCE_HIGHLIGHTING" />
@@ -128,7 +124,7 @@
       <workItem from="1677165513608" duration="14319000" />
       <workItem from="1677327330744" duration="5462000" />
       <workItem from="1677423919939" duration="6415000" />
-      <workItem from="1677510903789" duration="2607000" />
+      <workItem from="1677510903789" duration="5075000" />
     </task>
     <servers />
   </component>

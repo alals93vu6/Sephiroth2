@@ -8,5 +8,6 @@ public class WolfFettle :FettleGeneric
     public override void OnStart()
     {
         base.OnStart();
+        _hpData.ArmorValue = 3;
     }
 }

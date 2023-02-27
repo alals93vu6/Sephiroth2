@@ -13,18 +13,21 @@ public class GamePlayingManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        EventLoad();
+        ReLoadEventTuntable();
+        
+        _MonsterGenerics = FindObjectsOfType<MonsterGeneric>();
+        _playerManager = FindObjectOfType<PlayerManager>();
+    }
+
+    private void EventLoad()
+    {
         EventBus.Subscribe<StopTruntableDetected>(OnStopTruntable);
         EventBus.Subscribe<NewRoundDetected>(OnNewRound);
         EventBus.Subscribe<OnEnemyActorDetected>(OnEnemyActor);
         EventBus.Subscribe<PlayerAttackDetected>(OnPlayerAttack);
         EventBus.Subscribe<DefenseAttackDetected>(OnDefenseAttack);
-        
-        _turntableGenerics = FindObjectsOfType<TurntableGeneric>();
-        _MonsterGenerics = FindObjectsOfType<MonsterGeneric>();
-        _playerManager = FindObjectOfType<PlayerManager>();
     }
-
-    
 
     private void OnPlayerAttack(PlayerAttackDetected obj)
     {
@@ -52,6 +55,11 @@ public class GamePlayingManager : MonoBehaviour
     {
         Array.ForEach(_turntableGenerics,turnyable => turnyable.OnChoseEvent());
     }
-    
-    
+
+    public void ReLoadEventTuntable()
+    {
+        _turntableGenerics = FindObjectsOfType<TurntableGeneric>();
+    }
+
+
 }
