@@ -37,7 +37,7 @@ public class Map_System : MonoBehaviour
     void Update()
     {
         //Debug.Log(is_next_map);
-        // Debug.Log(Map_level);
+        Debug.Log(Map_level);
         load_test();
         next_basic_map(1, 4, 9);
     }
@@ -92,13 +92,14 @@ public class Map_System : MonoBehaviour
         {
             if (Map_level != black_level) //一般戰鬥
             {
+                Debug.Log("Basic_level");
                 map_reader(false, true, false, false, false);
 
-                if (Map_level % recover_level == 0)//恢復點
+                if (Map_level % recover_level == 0 && Map_level - recover_level >= 0)//恢復點
                 {
-                    Debug.Log("Recover_level");
                     map_reader(false, false, false, true, false);
                     Instantiate(recover);
+                    Debug.Log("Recover_level");
                 }
 
                 if (Map_level == boss_level) //Boss房間
