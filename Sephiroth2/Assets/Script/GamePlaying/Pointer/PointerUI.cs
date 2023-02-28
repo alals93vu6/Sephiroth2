@@ -16,4 +16,9 @@ public class PointerUI : MonoBehaviour
     {
         transform.Rotate(0,0,MoveSpeed * Time.deltaTime);
     }
+
+    public void OnStopPointer()
+    {
+        MoveSpeed = 0f;
+    }
 }

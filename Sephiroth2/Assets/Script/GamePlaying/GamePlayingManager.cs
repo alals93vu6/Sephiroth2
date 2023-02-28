@@ -28,6 +28,18 @@ public class GamePlayingManager : MonoBehaviour
         EventBus.Subscribe<PlayerAttackDetected>(OnPlayerAttack);
         EventBus.Subscribe<DefenseAttackDetected>(OnDefenseAttack);
         EventBus.Subscribe<PlayerOnSummonDetected>(OnPlayerSummon);
+        EventBus.Subscribe<PlayerDeadDetected>(OnPlayerDead);
+    }
+
+    private void OnPlayerDead(PlayerDeadDetected obj)
+    {
+        var PlayerDead = FindObjectOfType<Ending_effect>();
+        var Pointer = FindObjectOfType<PointerManager>();
+        var PointerShow = FindObjectsOfType<PointerUI>();
+        PlayerDead.OnPlayerDead();
+        Pointer.IsRun = false;
+        Array.ForEach(PointerShow,OnStop => OnStop.OnStopPointer());
+        Debug.Log("PlayerDead!!");
     }
 
     private void OnPlayerSummon(PlayerOnSummonDetected obj)

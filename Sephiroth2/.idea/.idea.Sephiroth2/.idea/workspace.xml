@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a91af2bd-aa7a-469b-a1f3-851aab1851a3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Script/GamePlaying/Event/PlayerDeadDetected.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script/GamePlaying/Event/PlayerDeadDetected.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sephiroth2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sephiroth2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Effect/Ending/Ending_effect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Effect/Ending/Ending_effect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resouces/Map/Map_System/Map_System.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resouces/Map/Map_System/Map_System.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Effect/SetSound/SetBGM.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Effect/SetSound/SetBGM.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Map_Scenes.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Map_Scenes.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/GamePlaying/FettleGeneric.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GamePlaying/FettleGeneric.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/GamePlaying/LocationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GamePlaying/LocationManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Monster/Test/MTestA.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Monster/Test/MTestA.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/GamePlaying/GamePlayingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GamePlaying/GamePlayingManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/GamePlaying/Pointer/PointerUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GamePlaying/Pointer/PointerUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerFettle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/PlayerFettle.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +130,7 @@
       <workItem from="1677327330744" duration="5462000" />
       <workItem from="1677423919939" duration="6415000" />
       <workItem from="1677510903789" duration="11440000" />
-      <workItem from="1677588105964" duration="2289000" />
+      <workItem from="1677588105964" duration="3637000" />
     </task>
     <servers />
   </component>
