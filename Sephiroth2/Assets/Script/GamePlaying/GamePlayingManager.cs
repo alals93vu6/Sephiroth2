@@ -29,6 +29,28 @@ public class GamePlayingManager : MonoBehaviour
         EventBus.Subscribe<DefenseAttackDetected>(OnDefenseAttack);
         EventBus.Subscribe<PlayerOnSummonDetected>(OnPlayerSummon);
         EventBus.Subscribe<PlayerDeadDetected>(OnPlayerDead);
+        EventBus.Subscribe<RoundStartDetected>(OnFightStart);
+        EventBus.Subscribe<RoundOverDetected>(OnFightEnd);
+    }
+
+    private void OnFightStart(RoundStartDetected obj)
+    {
+        var PointerRun = FindObjectOfType<PointerManager>();
+        var PointerShow = GameObject.Find("UIPointer").GetComponent<PointerUI>();
+        PointerShow.gameObject.transform.rotation = new Quaternion(0, 0, 0, 0);
+        PointerRun.gameObject.transform.rotation = new Quaternion(0, 0, 0, 0);
+        PointerRun.IsRun = true;
+        PointerShow.MoveSpeed = -180f;
+    }
+
+    private void OnFightEnd(RoundOverDetected obj)
+    {
+        var PlayerWin = FindObjectOfType<Ending_effect>();
+        var Pointer = FindObjectOfType<PointerManager>();
+        var PointerShow = GameObject.Find("UIPointer").GetComponent<PointerUI>();
+        Pointer.IsRun = false;
+        PointerShow.MoveSpeed = 0f;
+        PlayerWin.OnPlayerWin();
     }
 
     private void OnPlayerDead(PlayerDeadDetected obj)

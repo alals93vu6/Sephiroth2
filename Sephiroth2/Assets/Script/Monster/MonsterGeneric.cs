@@ -25,6 +25,7 @@ public class MonsterGeneric : MonoBehaviour
     {
         AttackCD = AttackCycle;
         EnemyNowHP = EnemyMaxHP;
+        HPUISet();
         LocationCheck();
     }
 
@@ -48,6 +49,25 @@ public class MonsterGeneric : MonoBehaviour
         }
     }
 
+    public virtual void HPUISet()
+    {
+        if (PositionalOrder == 0)
+        {
+            ShowHPimg = GameObject.Find("EnemyHpShowA").GetComponent<Image>();
+        }
+        else
+        {
+            if (PositionalOrder == 1)
+            {
+                ShowHPimg = GameObject.Find("EnemyHpShowB").GetComponent<Image>();
+            }
+            else
+            {
+                ShowHPimg = GameObject.Find("EnemyHpShowC").GetComponent<Image>();
+            } 
+        }
+    }
+
     public virtual void LocationCheck()
     {
         var nowLocation = FindObjectOfType<LocationManager>();
@@ -56,7 +76,13 @@ public class MonsterGeneric : MonoBehaviour
 
     public virtual void OnGitHit(float GetDamage)
     {
+        var nowLocation = FindObjectOfType<LocationManager>();
         EnemyNowHP -= GetDamage;
+        if (EnemyNowHP <= 0)
+        {
+            nowLocation.MonsterLocation[PositionalOrder] = null;
+            nowLocation.CheckSurvivalEnemy();
+        }
     }
 
     public virtual void ShowEnemyHP()

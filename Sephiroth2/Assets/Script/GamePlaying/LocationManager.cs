@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Project;
+using Project.Event;
 using UnityEngine;
 
 public class LocationManager : MonoBehaviour
@@ -21,6 +23,15 @@ public class LocationManager : MonoBehaviour
     void Update()
     {
         DisplayChangeLocation();
+
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            EventBus.Post(new RoundStartDetected());
+        }
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            EventBus.Post(new RoundOverDetected());
+        }
     }
 
     public void OnChangeLocation()
@@ -78,6 +89,14 @@ public class LocationManager : MonoBehaviour
     {
         PlayerLocation[1] = GameObject.Find("PlayerManager").GetComponent<FettleGeneric>();
         PlayerLocation[1].StatyLocation = 1;
+    }
+
+    public void CheckSurvivalEnemy()
+    {
+        if (MonsterLocation[0] == null && MonsterLocation[1] == null && MonsterLocation[2] == null)
+        {
+            
+        }
     }
 
     private void DisplayChangeLocation()
