@@ -48,7 +48,7 @@ public class FettleGeneric : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            OnHitDetected(0,10);  
+            //OnHitDetected(0,10);  
         }
     }
 
@@ -64,13 +64,35 @@ public class FettleGeneric : MonoBehaviour
         this.StatyLocation = ramNumber;
         LocationM.OnChangeLocation();
     }
-
+/*
     public virtual void OnHitDetected(int NowLocationnumber,float DamageNumber)
     {
         if (StatyLocation == NowLocationnumber)
         {
             OnHit(DamageNumber);
         }
+    }
+*/
+    public virtual void OnDead()
+    {
+        var LocationM = FindObjectOfType<LocationManager>();
+        if (LocationM.PlayerLocation[5] == null)
+        {
+            LocationM.PlayerLocation[5] = LocationM.PlayerLocation[StatyLocation];
+            LocationM.PlayerLocation[StatyLocation] = null;
+        }
+        else
+        {
+            if (LocationM.PlayerLocation[6] == null)
+            {
+                LocationM.PlayerLocation[6] = LocationM.PlayerLocation[StatyLocation];
+                LocationM.PlayerLocation[StatyLocation] = null;
+            }
+        }
+        
+        
+
+        
     }
 
     public void OnHit(float GetDamage)
@@ -90,6 +112,11 @@ public class FettleGeneric : MonoBehaviour
             {
                 _hpData.ArmorValue -= GetDamage;
             }
+        }
+
+        if (_hpData.NowHP <= 0)
+        {
+            OnDead();
         }
     }
 }

@@ -8,7 +8,7 @@ public class LocationManager : MonoBehaviour
     [SerializeField] public FettleGeneric[] PlayerLocation;
     [SerializeField] public int[] PlayerNowLocation;
     [SerializeField] public MonsterGeneric[] MonsterLocation;
-    [SerializeField] private Transform P1, P2, P3, E1, E2, E3;
+    [SerializeField] private Transform P1, P2, P3, DeadPos;
 
     
     // Start is called before the first frame update
@@ -25,6 +25,7 @@ public class LocationManager : MonoBehaviour
 
     public void OnChangeLocation()
     {
+        //var PlayerLocation = this.PlayerLocation
         PlayerLocation[3] = PlayerLocation[PlayerNowLocation[0]];
         PlayerLocation[4] = PlayerLocation[PlayerNowLocation[1]];
         PlayerLocation[PlayerNowLocation[0]] = PlayerLocation[4];
@@ -60,17 +61,11 @@ public class LocationManager : MonoBehaviour
 
     private void DisplayChangeLocation()
     {
-        if (PlayerLocation[0] != null)
-        {
-            PlayerLocation[0].transform.position = Vector3.Lerp(PlayerLocation[0].transform.position,P1.position,0.05f);
-        }
-        if (PlayerLocation[1] != null)
-        {
-            PlayerLocation[1].transform.position = Vector3.Lerp(PlayerLocation[1].transform.position,P2.position,0.05f);
-        }
-        if (PlayerLocation[2] != null)
-        {
-            PlayerLocation[2].transform.position = Vector3.Lerp(PlayerLocation[2].transform.position,P3.position,0.05f);
-        }
+        if (PlayerLocation[0] != null){PlayerLocation[0].transform.position = Vector3.Lerp(PlayerLocation[0].transform.position, P1.position, 0.05f);}
+        if (PlayerLocation[1] != null){PlayerLocation[1].transform.position = Vector3.Lerp(PlayerLocation[1].transform.position, P2.position, 0.05f);}
+        if (PlayerLocation[2] != null){PlayerLocation[2].transform.position = Vector3.Lerp(PlayerLocation[2].transform.position, P3.position, 0.05f);}
+        if (PlayerLocation[5] != null){PlayerLocation[5].transform.position = Vector3.Lerp(PlayerLocation[5].transform.position, DeadPos.position, 0.03f);}
+        if (PlayerLocation[6] != null){PlayerLocation[6].transform.position = Vector3.Lerp(PlayerLocation[6].transform.position, DeadPos.position, 0.03f);}
+        
     }
 }

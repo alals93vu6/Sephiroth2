@@ -37,7 +37,7 @@ public class Map_System : MonoBehaviour
     void Update()
     {
         //Debug.Log(is_next_map);
-        Debug.Log(Map_level);
+        //Debug.Log(Map_level);
         load_test();
         next_basic_map(1, 4, 9);
     }

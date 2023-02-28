@@ -16,7 +16,7 @@ public class Ending_effect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        end();
+        //end();
     }
 
     void end()
@@ -31,5 +31,15 @@ public class Ending_effect : MonoBehaviour
             Instantiate(dead);
             is_dead = false;
         }
+    }
+
+    public void OnPlayerWin()
+    {
+        Instantiate(win);
+    }
+
+    public void OnPlayerDead()
+    {
+        Instantiate(dead);
     }
 }

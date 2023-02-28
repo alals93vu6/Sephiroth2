@@ -17,7 +17,7 @@ public class MTestA : MonsterGeneric
     public override void Update()
     {
         base.Update();
-        CDTest.text = "AttackCD：" + AttackCD;
+        CDTest.text = "CD：" + AttackCD;
     }
 
     public override void OnPassRound()
