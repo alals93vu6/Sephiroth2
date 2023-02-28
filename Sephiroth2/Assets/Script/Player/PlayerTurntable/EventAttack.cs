@@ -6,21 +6,10 @@ using UnityEngine;
 
 public class EventAttack : TurntableGeneric
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    
     public override void OnPointed()
     {
         var AttackNumber = FindObjectOfType<LocationManager>();
         AttackNumber.EnemyOnAttackDetected(2);
+        Creat_Effect_Player.instance.Creat(Creat_Effect_Player.instance.Shake_Camera_Attack,Creat_Effect_Player.instance.Buff_Hit_pos[0]);
     }
 }

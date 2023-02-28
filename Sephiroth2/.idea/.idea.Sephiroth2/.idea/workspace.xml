@@ -3,13 +3,24 @@
   <component name="ChangeListManager">
     <list default="true" id="a91af2bd-aa7a-469b-a1f3-851aab1851a3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sephiroth2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sephiroth2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resouces/Map/Map_System/Map_System.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resouces/Map/Map_System/Map_System.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resouces/Map/Map_System/SetActiveButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resouces/Map/Map_System/SetActiveButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Effect/Buff/BUFF_Armor/Buff_Armor.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Effect/Buff/BUFF_Armor/Buff_Armor.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Effect/Buff/BUFF_Recover/Buff_Recover.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Effect/Buff/BUFF_Recover/Buff_Recover.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Effect/Creat_Effect_Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Effect/Creat_Effect_Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Effect/Hit/Basic/Get_hit.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Effect/Hit/Basic/Get_hit.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Map_Scenes.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Map_Scenes.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/GamePlaying/GamePlayingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GamePlaying/GamePlayingManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/GamePlaying/FettleGeneric.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GamePlaying/FettleGeneric.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/GamePlaying/LocationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GamePlaying/LocationManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Monster/MonsterGeneric.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Monster/MonsterGeneric.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Monster/Test/MTestA.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Monster/Test/MTestA.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerFettle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/PlayerFettle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerTurntable/EventAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/PlayerTurntable/EventAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerTurntable/EventDefense.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/PlayerTurntable/EventDefense.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerTurntable/EventHeal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/PlayerTurntable/EventHeal.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/Summoner/Attacker_Wolf/WolfFettle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/Summoner/Attacker_Wolf/WolfFettle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/Summoner/Attacker_Wolf/Wolf_Turntable/Event_WolfDefnse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/Summoner/Attacker_Wolf/Wolf_Turntable/Event_WolfDefnse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/Summoner/Support_Owl/OwlFettle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/Summoner/Support_Owl/OwlFettle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/Summoner/Support_Owl/Owl_Turntable/Event_OwlAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/Summoner/Support_Owl/Owl_Turntable/Event_OwlAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/Summoner/Support_Owl/Owl_Turntable/Event_OwlEveryOneHeal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/Summoner/Support_Owl/Owl_Turntable/Event_OwlEveryOneHeal.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/Summoner/Support_Owl/Owl_Turntable/Event_OwlFremostHeal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/Summoner/Support_Owl/Owl_Turntable/Event_OwlFremostHeal.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/Summoner/Support_Owl/Owl_Turntable/Event_OwlMinHeal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/Summoner/Support_Owl/Owl_Turntable/Event_OwlMinHeal.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +142,7 @@
       <workItem from="1677423919939" duration="6415000" />
       <workItem from="1677510903789" duration="11440000" />
       <workItem from="1677588105964" duration="6018000" />
-      <workItem from="1677598910302" duration="9405000" />
+      <workItem from="1677598910302" duration="13043000" />
     </task>
     <servers />
   </component>

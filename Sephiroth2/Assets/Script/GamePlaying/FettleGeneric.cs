@@ -94,7 +94,12 @@ public class FettleGeneric : MonoBehaviour
         }
     }
 
-    public void OnHit(float GetDamage)
+    public void GetHealEffect()
+    {
+        Creat_Effect_Player.instance.Creat(Creat_Effect_Player.instance.Buff_Recover,Creat_Effect_Player.instance.Buff_Recover_pos[StatyLocation]);
+    }
+
+    public virtual void OnHit(float GetDamage)
     {
         if (_hpData.ArmorValue == 0)
         {

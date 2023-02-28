@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class Creat_Effect_Player : MonoBehaviour
 {
+    #region Instance
+    static public Creat_Effect_Player instance;
+    private void Awake()
+    {
+        instance = this;
+    }
+    #endregion
+    
     [Header("恢復特效位置")]
     [SerializeField] public List<GameObject> Buff_Recover_pos;
     [Header("防禦特效位置")]
@@ -41,7 +49,7 @@ public class Creat_Effect_Player : MonoBehaviour
         }
 
     }
-    public static void Creat(GameObject Effect, GameObject pos)
+    public void Creat(GameObject Effect, GameObject pos)
     {
         Instantiate(Effect, pos.transform.position, new Quaternion(0, 0, 0, 0));
     }

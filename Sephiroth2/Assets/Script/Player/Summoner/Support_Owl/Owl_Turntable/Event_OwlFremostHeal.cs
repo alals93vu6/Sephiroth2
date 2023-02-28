@@ -14,6 +14,7 @@ public class Event_OwlFremostHeal : TurntableGeneric
             if (HealTarget.PlayerLocation[i] != null)
             {
                 HealTarget.PlayerLocation[i]._hpData.NowHP += HealNumber;
+                HealTarget.PlayerLocation[i].GetHealEffect();
                 break;
             }
         }

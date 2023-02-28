@@ -13,6 +13,7 @@ public class Event_OwlMinHeal : TurntableGeneric
         float HealNumber = IsDouble.DoubleReady == true ? 4 : 2;
         GetCompareNumber();
         HealTarget.PlayerLocation[MinNumber]._hpData.NowHP += HealNumber;
+        HealTarget.PlayerLocation[MinNumber].GetHealEffect();
     }
     
     private void GetCompareNumber()

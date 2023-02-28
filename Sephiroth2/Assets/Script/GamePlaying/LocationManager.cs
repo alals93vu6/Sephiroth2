@@ -63,6 +63,7 @@ public class LocationManager : MonoBehaviour
             }
         }
         PlayerLocation[NowStrikeLocation].OnHit(DamageNumber);
+        Creat_Effect_Player.instance.Creat(Creat_Effect_Player.instance.Shake_Camera_Attack,Creat_Effect_Player.instance.Buff_Hit_pos[0]);
     }
 
     public void EnemyOnAttackDetected(float DamageNumber)
@@ -84,6 +85,7 @@ public class LocationManager : MonoBehaviour
             }
         }
         MonsterLocation[NowStrikeLocation].OnGitHit(DamageNumber);
+        Creat_Effect_Player.instance.Creat(Creat_Effect_Player.instance.Shake_Camera_Attack,Creat_Effect_Player.instance.Buff_Hit_pos[0]);
     }
 
     private void StartSet()

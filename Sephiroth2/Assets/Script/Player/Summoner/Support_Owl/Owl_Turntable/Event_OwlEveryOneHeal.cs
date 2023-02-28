@@ -15,6 +15,7 @@ public class Event_OwlEveryOneHeal : TurntableGeneric
             if (HealTarget.PlayerLocation[i] != null)
             {
                 HealTarget.PlayerLocation[i]._hpData.NowHP += HealNumber;
+                HealTarget.PlayerLocation[i].GetHealEffect();
             }
         }
     }

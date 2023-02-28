@@ -8,5 +8,6 @@ public class EventHeal : TurntableGeneric
     {
         var Player = FindObjectOfType<PlayerManager>();
         Player._playerFettle._hpData.NowHP += 1;
+        Player._playerFettle.GetHealEffect();
     }
 }
