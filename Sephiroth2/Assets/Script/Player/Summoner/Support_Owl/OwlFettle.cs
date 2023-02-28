@@ -10,4 +10,13 @@ public class OwlFettle : FettleGeneric
     {
         base.OnStart();
     }
+
+    public override void OnDead()
+    {
+        var Turntable = FindObjectOfType<TurntableManager>();
+        var UI = FindObjectOfType<GameUIManager>();
+        base.OnDead();
+        Turntable.SummonerTurntable[1].SetActive(false);
+        UI.TurntableUI[1].SetActive(false);
+    }
 }

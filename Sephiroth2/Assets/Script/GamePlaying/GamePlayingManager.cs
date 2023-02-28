@@ -39,7 +39,7 @@ public class GamePlayingManager : MonoBehaviour
         PlayerDead.OnPlayerDead();
         Pointer.IsRun = false;
         Array.ForEach(PointerShow,OnStop => OnStop.OnStopPointer());
-        Debug.Log("PlayerDead!!");
+        //Debug.Log("PlayerDead!!");
     }
 
     private void OnPlayerSummon(PlayerOnSummonDetected obj)

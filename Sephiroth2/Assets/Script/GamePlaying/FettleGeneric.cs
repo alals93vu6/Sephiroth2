@@ -54,15 +54,18 @@ public class FettleGeneric : MonoBehaviour
 
     public virtual void OnSetLocation()
     {
-        var PlayerLC = FindObjectOfType<PlayerFettle>();
-        var LocationM = FindObjectOfType<LocationManager>();
-        int ramNumber;
-        LocationM.PlayerNowLocation[0] = PlayerLC.StatyLocation;
-        LocationM.PlayerNowLocation[1] = this.StatyLocation;
-        ramNumber = LocationM.PlayerNowLocation[0];
-        PlayerLC.StatyLocation = this.StatyLocation;
-        this.StatyLocation = ramNumber;
-        LocationM.OnChangeLocation();
+        if (_hpData.NowHP > 0)
+        {
+            var PlayerLC = FindObjectOfType<PlayerFettle>();
+            var LocationM = FindObjectOfType<LocationManager>();
+            int ramNumber;
+            LocationM.PlayerNowLocation[0] = PlayerLC.StatyLocation;
+            LocationM.PlayerNowLocation[1] = this.StatyLocation;
+            ramNumber = LocationM.PlayerNowLocation[0];
+            PlayerLC.StatyLocation = this.StatyLocation;
+            this.StatyLocation = ramNumber;
+            LocationM.OnChangeLocation(); 
+        }
     }
 /*
     public virtual void OnHitDetected(int NowLocationnumber,float DamageNumber)
@@ -89,10 +92,6 @@ public class FettleGeneric : MonoBehaviour
                 LocationM.PlayerLocation[StatyLocation] = null;
             }
         }
-        
-        
-
-        
     }
 
     public void OnHit(float GetDamage)
