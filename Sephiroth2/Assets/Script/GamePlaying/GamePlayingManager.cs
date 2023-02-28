@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Project;
 using Project.Event;
 using UnityEngine;
@@ -15,7 +16,7 @@ public class GamePlayingManager : MonoBehaviour
     {
         EventLoad();
         ReLoadEventTuntable();
-        
+        OnStart();
         _MonsterGenerics = FindObjectsOfType<MonsterGeneric>();
         _playerManager = FindObjectOfType<PlayerManager>();
     }
@@ -33,6 +34,13 @@ public class GamePlayingManager : MonoBehaviour
         EventBus.Subscribe<RoundOverDetected>(OnFightEnd);
     }
 
+    private async void OnStart()
+    {
+        var GameStart = FindObjectOfType<SetActiveButton>();
+        await Task.Delay(500);
+        GameStart.is_end = true;
+    }
+
     private void OnFightStart(RoundStartDetected obj)
     {
         var PointerRun = FindObjectOfType<PointerManager>();
@@ -47,10 +55,13 @@ public class GamePlayingManager : MonoBehaviour
     {
         var PlayerWin = FindObjectOfType<Ending_effect>();
         var Pointer = FindObjectOfType<PointerManager>();
+        var nextLV = FindObjectOfType<SetActiveButton>();
         var PointerShow = GameObject.Find("UIPointer").GetComponent<PointerUI>();
         Pointer.IsRun = false;
         PointerShow.MoveSpeed = 0f;
         PlayerWin.OnPlayerWin();
+        nextLV.is_end = true;
+
     }
 
     private void OnPlayerDead(PlayerDeadDetected obj)

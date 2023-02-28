@@ -23,7 +23,7 @@ public class LocationManager : MonoBehaviour
     void Update()
     {
         DisplayChangeLocation();
-
+        /*
         if (Input.GetKeyDown(KeyCode.O))
         {
             EventBus.Post(new RoundStartDetected());
@@ -32,6 +32,7 @@ public class LocationManager : MonoBehaviour
         {
             EventBus.Post(new RoundOverDetected());
         }
+        */
     }
 
     public void OnChangeLocation()
@@ -95,7 +96,7 @@ public class LocationManager : MonoBehaviour
     {
         if (MonsterLocation[0] == null && MonsterLocation[1] == null && MonsterLocation[2] == null)
         {
-            
+            EventBus.Post(new RoundOverDetected());
         }
     }
 

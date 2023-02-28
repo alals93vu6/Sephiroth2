@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SetActiveButton : MonoBehaviour
 {
-    public static bool is_end = false;
+    [SerializeField] public bool is_end = false;
     public GameObject button;
     // Start is called before the first frame update
     void Start()

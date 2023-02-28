@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Project;
+using Project.Event;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -94,7 +96,7 @@ public class Map_System : MonoBehaviour
             {
                 Debug.Log("Basic_level");
                 map_reader(false, true, false, false, false);
-
+                EventBus.Post(new RoundStartDetected());
                 if (Map_level % recover_level == 0 && Map_level - recover_level >= 0)//恢復點
                 {
                     map_reader(false, false, false, true, false);
@@ -106,6 +108,7 @@ public class Map_System : MonoBehaviour
                 {
                     Debug.Log("Boss_level");
                     map_reader(false, false, false, false, true);
+                    EventBus.Post(new RoundStartDetected());
                 }
 
                 new_map = Random.Range(1, 5);

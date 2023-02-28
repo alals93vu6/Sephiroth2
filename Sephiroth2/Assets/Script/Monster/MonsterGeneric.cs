@@ -15,10 +15,12 @@ public class MonsterGeneric : MonoBehaviour
     [SerializeField] public int AttackCycle;
     [SerializeField] public int AttackDamage;
     [SerializeField] public int PositionalOrder;
-
+    [SerializeField] public bool IsDead;
     [Header("UI數值")] 
     [SerializeField] public Image ShowHPimg;
     [SerializeField] public float ShowHPNumber;
+    [Header("物件")] 
+    [SerializeField] private Text CDTest;
     
     // Start is called before the first frame update
     public virtual void Start()
@@ -26,6 +28,7 @@ public class MonsterGeneric : MonoBehaviour
         AttackCD = AttackCycle;
         EnemyNowHP = EnemyMaxHP;
         HPUISet();
+        TextSet();
         LocationCheck();
     }
 
@@ -33,19 +36,27 @@ public class MonsterGeneric : MonoBehaviour
     public virtual void Update()
     {
         ShowEnemyHP();
+        CDTest.text = "CD：" + AttackCD;
+        if (IsDead)
+        {
+            transform.position = Vector3.Lerp(this.transform.position, new Vector3(15,-2,0), 0.05f);
+        }
     }
 
     public virtual void OnPassRound()
     {
         var StrikeTarget = FindObjectOfType<LocationManager>();
-        if (AttackCD == 0)
+        if (!IsDead)
         {
-            AttackCD = AttackCycle;
-            StrikeTarget.PlayerOnAttackDetected(AttackDamage);
-        }
-        else
-        {
-            AttackCD--;
+            if (AttackCD == 0)
+            {
+                AttackCD = AttackCycle;
+                StrikeTarget.PlayerOnAttackDetected(AttackDamage);
+            }
+            else
+            {
+                AttackCD--;
+            } 
         }
     }
 
@@ -67,6 +78,28 @@ public class MonsterGeneric : MonoBehaviour
             } 
         }
     }
+    
+    public void TextSet()
+    {
+        string FindText;
+        if (PositionalOrder == 0)
+        {
+
+            FindText = "CDA";
+        }
+        else
+        {
+            if (PositionalOrder == 1)
+            {
+                FindText = "CDB";
+            }
+            else
+            {
+                FindText = "CDC";
+            } 
+        }
+        CDTest = GameObject.Find(FindText).GetComponent<Text>();
+    }
 
     public virtual void LocationCheck()
     {
@@ -80,6 +113,7 @@ public class MonsterGeneric : MonoBehaviour
         EnemyNowHP -= GetDamage;
         if (EnemyNowHP <= 0)
         {
+            IsDead = true;
             nowLocation.MonsterLocation[PositionalOrder] = null;
             nowLocation.CheckSurvivalEnemy();
         }
