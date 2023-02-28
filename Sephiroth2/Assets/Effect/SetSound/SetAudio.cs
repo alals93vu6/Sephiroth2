@@ -23,7 +23,7 @@ public class SetAudio : MonoBehaviour
     {
         BGM_Audio.clip = Setaudio[audioNum];
         BGM_Audio.volume = SetAudioVal.Sound_Val;
-        Debug.Log(BGM_Audio.volume);
+        //Debug.Log(BGM_Audio.volume);
         is_play();
     }
 

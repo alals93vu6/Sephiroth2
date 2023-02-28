@@ -97,6 +97,7 @@ public class FettleGeneric : MonoBehaviour
     public void GetHealEffect()
     {
         Creat_Effect_Player.instance.Creat(Creat_Effect_Player.instance.Buff_Recover,Creat_Effect_Player.instance.Buff_Recover_pos[StatyLocation]);
+        MusicManager.instance.PlayHeal();
     }
 
     public virtual void OnHit(float GetDamage)
