@@ -7,6 +7,8 @@ using UnityEngine;
 public class PointerManager : MonoBehaviour
 {
     [SerializeField] public bool IsRun;
+
+    [SerializeField] public float MoveSpeed;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +18,7 @@ public class PointerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (IsRun){transform.Rotate(0,0,-150 * Time.deltaTime);}
+        if (IsRun){transform.Rotate(0,0,MoveSpeed * Time.deltaTime);}
     }
 
     public void OnStopPointer()

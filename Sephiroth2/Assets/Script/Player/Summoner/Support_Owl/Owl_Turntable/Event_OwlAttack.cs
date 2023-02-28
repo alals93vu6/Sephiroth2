@@ -8,8 +8,7 @@ public class Event_OwlAttack : TurntableGeneric
 {
     public override void OnPointed()
     {
-        var AttackNumber = FindObjectOfType<PlayerManager>();
-        AttackNumber.CauseDamage = 1;
-        EventBus.Post(new PlayerAttackDetected());
+        var AttackNumber = FindObjectOfType<LocationManager>();
+        AttackNumber.EnemyOnAttackDetected(1);
     }
 }

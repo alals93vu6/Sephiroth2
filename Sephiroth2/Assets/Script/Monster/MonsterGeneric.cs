@@ -25,6 +25,7 @@ public class MonsterGeneric : MonoBehaviour
     {
         AttackCD = AttackCycle;
         EnemyNowHP = EnemyMaxHP;
+        LocationCheck();
     }
 
     // Update is called once per frame
@@ -45,6 +46,12 @@ public class MonsterGeneric : MonoBehaviour
         {
             AttackCD--;
         }
+    }
+
+    public virtual void LocationCheck()
+    {
+        var nowLocation = FindObjectOfType<LocationManager>();
+        nowLocation.MonsterLocation[PositionalOrder] = this.gameObject.GetComponent<MonsterGeneric>();
     }
 
     public virtual void OnGitHit(float GetDamage)

@@ -53,6 +53,27 @@ public class LocationManager : MonoBehaviour
         PlayerLocation[NowStrikeLocation].OnHit(DamageNumber);
     }
 
+    public void EnemyOnAttackDetected(float DamageNumber)
+    {
+        int NowStrikeLocation;
+        if (MonsterLocation[0] != null)
+        {
+            NowStrikeLocation = 0;
+        }
+        else
+        {
+            if (MonsterLocation[1] != null)
+            {
+                NowStrikeLocation = 1;
+            }
+            else
+            {
+                NowStrikeLocation = 2;
+            }
+        }
+        MonsterLocation[NowStrikeLocation].OnGitHit(DamageNumber);
+    }
+
     private void StartSet()
     {
         PlayerLocation[1] = GameObject.Find("PlayerManager").GetComponent<FettleGeneric>();
