@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameUIManager : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class GameUIManager : MonoBehaviour
     [SerializeField] private GameObject ActorObj;
 
     [SerializeField] public GameObject[] TurntableUI;
+
+    [SerializeField] public Image[] HpUI;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,5 +38,11 @@ public class GameUIManager : MonoBehaviour
             ActorObj.SetActive(false);
         }
     }
-    
+
+    public void ResetHPUI()
+    {
+        HpUI[0].fillAmount = 1f;
+        HpUI[1].fillAmount = 1f;
+        HpUI[2].fillAmount = 1f;
+    }
 }

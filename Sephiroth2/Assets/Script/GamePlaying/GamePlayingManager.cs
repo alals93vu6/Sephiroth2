@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Project;
 using Project.Event;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GamePlayingManager : MonoBehaviour
 {
@@ -51,11 +52,13 @@ public class GamePlayingManager : MonoBehaviour
     {
         //ReLoadEventMonster();
         var PointerRun = FindObjectOfType<PointerManager>();
+        var HpUI = FindObjectOfType<GameUIManager>();
         var PointerShow = GameObject.Find("UIPointer").GetComponent<PointerUI>();
         PointerShow.gameObject.transform.rotation = new Quaternion(0, 0, 0, 0);
         PointerRun.gameObject.transform.rotation = new Quaternion(0, 0, 0, 0);
         PointerRun.IsRun = true;
         PointerShow.MoveSpeed = -180f;
+        HpUI.ResetHPUI();
     }
 
     private void OnFightEnd(RoundOverDetected obj)
@@ -68,10 +71,10 @@ public class GamePlayingManager : MonoBehaviour
         PointerShow.MoveSpeed = 0f;
         PlayerWin.OnPlayerWin();
         nextLV.is_end = true;
-
+        Destroy(GameObject.FindWithTag("Build"));
     }
 
-    private void OnPlayerDead(PlayerDeadDetected obj)
+    private async void OnPlayerDead(PlayerDeadDetected obj)
     {
         var PlayerDead = FindObjectOfType<Ending_effect>();
         var Pointer = FindObjectOfType<PointerManager>();
@@ -79,6 +82,9 @@ public class GamePlayingManager : MonoBehaviour
         PlayerDead.OnPlayerDead();
         Pointer.IsRun = false;
         Array.ForEach(PointerShow,OnStop => OnStop.OnStopPointer());
+
+        await Task.Delay(2300);
+        SceneManager.LoadScene(0);
         //Debug.Log("PlayerDead!!");
     }
 

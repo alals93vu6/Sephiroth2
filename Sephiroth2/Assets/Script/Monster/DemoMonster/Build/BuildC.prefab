@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 512500039626939579}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BuildC
-  m_TagString: Untagged
+  m_TagString: Build
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,6 +97,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7737819039716823586, guid: d095af9a156681a449425ba99c9f06ec,
+        type: 3}
+      propertyPath: AttackCycle
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d095af9a156681a449425ba99c9f06ec, type: 3}

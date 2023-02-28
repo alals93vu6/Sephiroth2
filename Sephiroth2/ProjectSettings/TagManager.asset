@@ -10,6 +10,7 @@ TagManager:
   - SummonerTurntable
   - Map
   - Next_Map_Button
+  - Build
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - 
   - 
   - Turntable
-  - 
+  - Build
   - 
   - 
   - 

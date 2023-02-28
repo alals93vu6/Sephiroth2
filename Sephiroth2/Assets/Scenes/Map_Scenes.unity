@@ -7105,6 +7105,10 @@ MonoBehaviour:
   TurntableUI:
   - {fileID: 4696712865404427495}
   - {fileID: 4696712866462368107}
+  HpUI:
+  - {fileID: 4696712866320863268}
+  - {fileID: 523944418}
+  - {fileID: 1778178243}
 --- !u!224 &4696712866588448476
 RectTransform:
   m_ObjectHideFlags: 0

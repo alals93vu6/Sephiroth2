@@ -2,12 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a91af2bd-aa7a-469b-a1f3-851aab1851a3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Script/GamePlaying/Event/NewMonsterDetected.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script/GamePlaying/Event/NewMonsterDetected.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sephiroth2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sephiroth2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resouces/Map/Map_System/Map_System.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resouces/Map/Map_System/Map_System.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resouces/Map/basic/map0_1_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resouces/Map/basic/map0_1_2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resouces/Map/basic/map1_2_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resouces/Map/basic/map1_2_1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resouces/Map/basic/map1_2_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resouces/Map/basic/map1_2_2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScenes.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScenes.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Map_Scenes.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Map_Scenes.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/GamePlaying/GamePlayingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GamePlaying/GamePlayingManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/GamePlaying/GameUIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GamePlaying/GameUIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Monster/DemoMonster/Build/BuildA.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Monster/DemoMonster/Build/BuildA.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Monster/DemoMonster/Build/BuildB.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Monster/DemoMonster/Build/BuildB.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Monster/DemoMonster/Build/BuildC.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Monster/DemoMonster/Build/BuildC.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Monster/DemoMonster/Build/BuildD.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Monster/DemoMonster/Build/BuildD.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Monster/DemoMonster/Build/BuildE.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Monster/DemoMonster/Build/BuildE.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Monster/DemoMonster/Build/BuildF.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Monster/DemoMonster/Build/BuildF.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +141,7 @@
       <workItem from="1677510903789" duration="11440000" />
       <workItem from="1677588105964" duration="6018000" />
       <workItem from="1677598910302" duration="16517000" />
-      <workItem from="1677621808322" duration="1172000" />
+      <workItem from="1677621808322" duration="3597000" />
     </task>
     <servers />
   </component>
