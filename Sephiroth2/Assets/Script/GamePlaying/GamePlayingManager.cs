@@ -32,6 +32,12 @@ public class GamePlayingManager : MonoBehaviour
         EventBus.Subscribe<PlayerDeadDetected>(OnPlayerDead);
         EventBus.Subscribe<RoundStartDetected>(OnFightStart);
         EventBus.Subscribe<RoundOverDetected>(OnFightEnd);
+        EventBus.Subscribe<NewRoundDetected>(OnMonsterInstantiate);
+    }
+
+    private void OnMonsterInstantiate(NewRoundDetected obj)
+    {
+        ReLoadEventMonster();
     }
 
     private async void OnStart()
@@ -43,6 +49,7 @@ public class GamePlayingManager : MonoBehaviour
 
     private void OnFightStart(RoundStartDetected obj)
     {
+        //ReLoadEventMonster();
         var PointerRun = FindObjectOfType<PointerManager>();
         var PointerShow = GameObject.Find("UIPointer").GetComponent<PointerUI>();
         PointerShow.gameObject.transform.rotation = new Quaternion(0, 0, 0, 0);
@@ -110,6 +117,12 @@ public class GamePlayingManager : MonoBehaviour
     public void ReLoadEventTuntable()
     {
         _turntableGenerics = FindObjectsOfType<TurntableGeneric>();
+    }
+    
+    public void ReLoadEventMonster()
+    {
+        _MonsterGenerics = FindObjectsOfType<MonsterGeneric>();
+        Debug.Log("FindMonster");
     }
 
 

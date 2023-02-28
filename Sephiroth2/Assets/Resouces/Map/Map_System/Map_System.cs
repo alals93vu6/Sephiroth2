@@ -90,6 +90,7 @@ public class Map_System : MonoBehaviour
     }
     void next_basic_map(int black_level, int recover_level, int boss_level) // set_level
     {
+        var MonsterInstantiate = FindObjectOfType<OnInstantiate>();
         if (is_next_map)
         {
             if (Map_level != black_level) //一般戰鬥
@@ -97,11 +98,13 @@ public class Map_System : MonoBehaviour
                 Debug.Log("Basic_level");
                 map_reader(false, true, false, false, false);
                 EventBus.Post(new RoundStartDetected());
+                MonsterInstantiate.OnInstantiateMonster();
                 if (Map_level % recover_level == 0 && Map_level - recover_level >= 0)//恢復點
                 {
                     map_reader(false, false, false, true, false);
                     Instantiate(recover);
                     Debug.Log("Recover_level");
+                    EventBus.Post(new RoundOverDetected());
                 }
 
                 if (Map_level == boss_level) //Boss房間
@@ -109,6 +112,7 @@ public class Map_System : MonoBehaviour
                     Debug.Log("Boss_level");
                     map_reader(false, false, false, false, true);
                     EventBus.Post(new RoundStartDetected());
+                    MonsterInstantiate.OnInstantiateMonster();
                 }
 
                 new_map = Random.Range(1, 5);
