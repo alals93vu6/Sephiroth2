@@ -45,7 +45,7 @@ public class Map_System : MonoBehaviour
         //Debug.Log(is_next_map);
         //Debug.Log(Map_level);
         //Debug.Log(roomcode);
-        Debug.Log(is_map_time);
+        //Debug.Log(is_map_time);
         load_test();
         next_basic_map();
     }
@@ -106,7 +106,7 @@ public class Map_System : MonoBehaviour
                 {
                     Debug.Log("Basic_level");
                     map_reader(false, true, false, false, false);
-                    EventBus.Post(new RoundStartDetected());
+                    //EventBus.Post(new RoundStartDetected());
                     //MonsterInstantiate.OnInstantiateMonster();
                     new_map = Random.Range(1, 5);
                     load_Map(new_map);
@@ -121,14 +121,14 @@ public class Map_System : MonoBehaviour
                     load_Map(new_map);
                     Instantiate(recover);
                     Debug.Log("Recover_level");
-                    EventBus.Post(new RoundOverDetected());
+                    //EventBus.Post(new RoundOverDetected());
                 }
 
                 if (roomcode == 2) //Boss房間
                 {
                     Debug.Log("Boss_level");
                     map_reader(false, false, false, false, true);
-                    EventBus.Post(new RoundStartDetected());
+                    //EventBus.Post(new RoundStartDetected());
                     new_map = Random.Range(1, 5);
                     load_Map(new_map);
                     load_Map(new_map);
