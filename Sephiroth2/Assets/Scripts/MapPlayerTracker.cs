@@ -62,6 +62,8 @@ namespace Map
 
         private static void EnterNode(MapNode mapNode)
         {
+            Map_System.is_map_time = ! Map_System.is_map_time;
+            Map_System.is_creat = true;
             // we have access to blueprint name here as well
             Debug.Log("Entering node: " + mapNode.Node.blueprintName + " of type: " + mapNode.Node.nodeType);
             // load appropriate scene with context based on nodeType:
@@ -69,20 +71,26 @@ namespace Map
             // if you choose to show GUI in some of these cases, do not forget to set "Locked" in MapPlayerTracker back to false
             switch (mapNode.Node.nodeType)
             {
-                case NodeType.MinorEnemy:
-                  test.roomcode =1;
+                case NodeType.MinorEnemy://戰鬥
+                    Map_System.roomcode = 0;
                     break;
-                case NodeType.EliteEnemy:
+                case NodeType.EliteEnemy://戰鬥
+                    Map_System.roomcode = 0;
                     break;
-                case NodeType.RestSite:
+                case NodeType.RestSite://休息
+                    Map_System.roomcode = 1;
                     break;
-                case NodeType.Treasure:
+                case NodeType.Treasure://戰鬥
+                    Map_System.roomcode = 0;
                     break;
-                case NodeType.Store:
+                case NodeType.Store: //戰鬥
+                    Map_System.roomcode = 0;
                     break;
-                case NodeType.Boss:
+                case NodeType.Boss: //BOSS
+                    Map_System.roomcode = 2;
                     break;
-                case NodeType.Mystery:
+                case NodeType.Mystery://戰鬥
+                    Map_System.roomcode = 0;
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();

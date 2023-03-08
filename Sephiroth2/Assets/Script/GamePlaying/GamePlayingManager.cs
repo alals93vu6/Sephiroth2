@@ -43,9 +43,9 @@ public class GamePlayingManager : MonoBehaviour
 
     private async void OnStart()
     {
-        var GameStart = FindObjectOfType<SetActiveButton>();
         await Task.Delay(500);
-        GameStart.is_end = true;
+        Map_System.is_map_time = true;
+
     }
 
     private void OnFightStart(RoundStartDetected obj)
@@ -65,12 +65,12 @@ public class GamePlayingManager : MonoBehaviour
     {
         var PlayerWin = FindObjectOfType<Ending_effect>();
         var Pointer = FindObjectOfType<PointerManager>();
-        var nextLV = FindObjectOfType<SetActiveButton>();
+        // var nextLV = FindObjectOfType<SetActiveButton>();
         var PointerShow = GameObject.Find("UIPointer").GetComponent<PointerUI>();
         Pointer.IsRun = false;
         PointerShow.MoveSpeed = 0f;
         PlayerWin.OnPlayerWin();
-        nextLV.is_end = true;
+        Map_System.is_map_time = true;
         Destroy(GameObject.FindWithTag("Build"));
     }
 
@@ -81,7 +81,7 @@ public class GamePlayingManager : MonoBehaviour
         var PointerShow = FindObjectsOfType<PointerUI>();
         PlayerDead.OnPlayerDead();
         Pointer.IsRun = false;
-        Array.ForEach(PointerShow,OnStop => OnStop.OnStopPointer());
+        Array.ForEach(PointerShow, OnStop => OnStop.OnStopPointer());
 
         await Task.Delay(2300);
         SceneManager.LoadScene(0);
@@ -96,7 +96,7 @@ public class GamePlayingManager : MonoBehaviour
     private void OnPlayerAttack(PlayerAttackDetected obj)
     {
         var PlayerDamage = FindObjectOfType<PlayerManager>();
-        Array.ForEach(_MonsterGenerics,GetDamage=>GetDamage.OnGitHit(PlayerDamage.CauseDamage));
+        Array.ForEach(_MonsterGenerics, GetDamage => GetDamage.OnGitHit(PlayerDamage.CauseDamage));
     }
 
     private void OnEnemyActor(OnEnemyActorDetected obj)
@@ -108,23 +108,23 @@ public class GamePlayingManager : MonoBehaviour
     {
         _playerManager._playerActor.changeState(new PlayerRound());
         _playerManager._playerActor.RemainingDefense = 3f;
-        Array.ForEach(_MonsterGenerics,monsters => monsters.OnPassRound());
+        Array.ForEach(_MonsterGenerics, monsters => monsters.OnPassRound());
     }
-    
+
     private void OnDefenseAttack(DefenseAttackDetected obj)
     {
         //Array.ForEach(_turntableGenerics,turnyable => turnyable.OnChoseDefense());
     }
     private void OnStopTruntable(StopTruntableDetected obj)
     {
-        Array.ForEach(_turntableGenerics,turnyable => turnyable.OnChoseEvent());
+        Array.ForEach(_turntableGenerics, turnyable => turnyable.OnChoseEvent());
     }
 
     public void ReLoadEventTuntable()
     {
         _turntableGenerics = FindObjectsOfType<TurntableGeneric>();
     }
-    
+
     public void ReLoadEventMonster()
     {
         _MonsterGenerics = FindObjectsOfType<MonsterGeneric>();
