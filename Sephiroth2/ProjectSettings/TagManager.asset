@@ -11,6 +11,8 @@ TagManager:
   - Map
   - Next_Map_Button
   - Build
+  - ChooseMap_backGround
+  - ChooseMap
   layers:
   - Default
   - TransparentFX

@@ -25,10 +25,14 @@ public class Map_System : MonoBehaviour
     [SerializeField] public static bool Recover_map = false;
     [SerializeField] public static bool Boss_map = false;
 
+    [Header("MAP")]
+    [SerializeField] public static int roomcode; //  0=戰鬥 1=休息 2=BOSS 3=小黑
+    [SerializeField] public static bool is_map_time = true;
+    //打完一場戰鬥後都要  Map_System.is_map_time = ! Map_System.is_map_time; 切回我們的選地圖
 
     int new_map;
     public static int old_a = 0;
-
+    public static bool is_creat = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,8 +44,10 @@ public class Map_System : MonoBehaviour
     {
         //Debug.Log(is_next_map);
         //Debug.Log(Map_level);
+        //Debug.Log(roomcode);
+        Debug.Log(is_map_time);
         load_test();
-        next_basic_map(1, 4, 9);
+        next_basic_map();
     }
 
     void load_Map(int new_a)
@@ -51,7 +57,8 @@ public class Map_System : MonoBehaviour
         Instantiate(shady);
         old_a = new_a;
         // Debug.Log(new_a);
-        is_next_map = false;
+        //is_next_map = false;
+
     }
 
     void load_test() //測試用
@@ -88,51 +95,58 @@ public class Map_System : MonoBehaviour
         foreach (GameObject oneObject in destroyObject)
             Destroy(oneObject);
     }
-    void next_basic_map(int black_level, int recover_level, int boss_level) // set_level
+    void next_basic_map() // set_level
     {
-        var MonsterInstantiate = FindObjectOfType<OnInstantiate>();
-        if (is_next_map)
+        //var MonsterInstantiate = FindObjectOfType<OnInstantiate>();
+        if (is_map_time == false)
         {
-            if (Map_level != black_level) //一般戰鬥
+            if (is_creat)
             {
-                Debug.Log("Basic_level");
-                map_reader(false, true, false, false, false);
-                EventBus.Post(new RoundStartDetected());
-                MonsterInstantiate.OnInstantiateMonster();
-                if (Map_level % recover_level == 0 && Map_level - recover_level >= 0)//恢復點
+                if (roomcode == 0) //一般戰鬥
+                {
+                    Debug.Log("Basic_level");
+                    map_reader(false, true, false, false, false);
+                    EventBus.Post(new RoundStartDetected());
+                    //MonsterInstantiate.OnInstantiateMonster();
+                    new_map = Random.Range(1, 5);
+                    load_Map(new_map);
+                    load_Map(new_map);
+                    Map_level++;
+                }
+                if (roomcode == 1)//恢復點
                 {
                     map_reader(false, false, false, true, false);
+                    new_map = Random.Range(1, 5);
+                    load_Map(new_map);
+                    load_Map(new_map);
                     Instantiate(recover);
                     Debug.Log("Recover_level");
                     EventBus.Post(new RoundOverDetected());
                 }
 
-                if (Map_level == boss_level) //Boss房間
+                if (roomcode == 2) //Boss房間
                 {
                     Debug.Log("Boss_level");
                     map_reader(false, false, false, false, true);
                     EventBus.Post(new RoundStartDetected());
-                    MonsterInstantiate.OnInstantiateMonster();
+                    new_map = Random.Range(1, 5);
+                    load_Map(new_map);
+                    load_Map(new_map);
+                    //MonsterInstantiate.OnInstantiateMonster();
                 }
+                if (roomcode == 0 && Map_level == 3)//小黑取得
+                {
+                    map_reader(false, false, true, false, false);
+                    load_Map(5);
+                    load_Map(5);
+                    Map_level++;
+                }
+                is_creat = false;
+            }
 
-                new_map = Random.Range(1, 5);
-                load_Map(new_map);
-                load_Map(new_map);
-                Map_level++;
-            }
-            if (Map_level == black_level)//小黑取得
-            {
-                map_reader(false, false, true, false, false);
-                load_Map(5);
-                load_Map(5);
-                Map_level++;
-            }
         }
     }
-    public void is_next_map_button() //按鈕執行用
-    {
-        is_next_map = true;
-    }
+
     void map_reader(bool start, bool basic, bool black, bool recover, bool boss)
     {
         Start_map = start;
@@ -141,4 +155,5 @@ public class Map_System : MonoBehaviour
         Recover_map = recover;
         Boss_map = boss;
     }
+
 }
