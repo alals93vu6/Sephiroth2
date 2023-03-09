@@ -85,6 +85,7 @@ public class GamePlayingManager : MonoBehaviour
 
         await Task.Delay(2300);
         SceneManager.LoadScene(0);
+        map_time.is_new_game = true;
         //Debug.Log("PlayerDead!!");
     }
 
