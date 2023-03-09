@@ -2,37 +2,29 @@
 using System.Collections.Generic;
 using Map;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class map_time : MonoBehaviour
 {
     public GameObject mapmanager;
-
-    public GameObject[] map;
+    [SerializeField] public static bool is_map_time = false;
+    //打完一場戰鬥後都要  is_map_time = ! is_map_time; 切回我們的選地圖
+    public static bool is_load = false;
     // Start is called before the first frame update
     void Start()
     {
-        map = GameObject.FindGameObjectsWithTag("ChooseMap");
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            Map_System.is_map_time = !Map_System.is_map_time;
-        }
+        Debug.Log(is_map_time);
         ResetMap();
-        if (Map_System.is_map_time == true)
-        {
-            SetActiveWithTag(true);
-        }
-        if (Map_System.is_map_time == false)
-        {
-            SetActiveWithTag(false);
-        }
+        changscene(3,4);
+
     }
-    void SetActiveWithTag(bool now_bool) //刪除地圖物件
+    /*void SetActiveWithTag(bool now_bool) //刪除地圖物件
     {
         foreach (GameObject oneObject in map)
             if (oneObject != null)
@@ -40,7 +32,7 @@ public class map_time : MonoBehaviour
                 oneObject.SetActive(now_bool);
             }
         ;
-    }
+    }*/
 
     void ResetMap()
     {
@@ -48,9 +40,20 @@ public class map_time : MonoBehaviour
         {
             Debug.Log("rest");
             mapmanager.GetComponent<MapManager>().GenerateNewMap();
-            Map_System.is_map_time = true;
+            is_map_time = true;
             Map_System.Map_level = 0;
-            map = GameObject.FindGameObjectsWithTag("ChooseMap");
+           // map = GameObject.FindGameObjectsWithTag("ChooseMap");
+        }
+    }
+
+    static void changscene(int a, int b)
+    {
+        if (is_load)
+        {
+                SceneManager.LoadScene(a);
+                is_map_time = false;
+                is_load = false;
+                Map_System.is_creat =true;
         }
     }
 }

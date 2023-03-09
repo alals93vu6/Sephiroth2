@@ -44,7 +44,7 @@ public class GamePlayingManager : MonoBehaviour
     private async void OnStart()
     {
         await Task.Delay(500);
-        Map_System.is_map_time = true;
+        //map_time.is_map_time = true;
 
     }
 
@@ -70,7 +70,7 @@ public class GamePlayingManager : MonoBehaviour
         Pointer.IsRun = false;
         PointerShow.MoveSpeed = 0f;
         PlayerWin.OnPlayerWin();
-        Map_System.is_map_time = true;
+        map_time.is_map_time = true;
         Destroy(GameObject.FindWithTag("Build"));
     }
 

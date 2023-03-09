@@ -62,7 +62,7 @@ namespace Map
 
         private static void EnterNode(MapNode mapNode)
         {
-            Map_System.is_map_time = ! Map_System.is_map_time;
+            map_time.is_map_time = !map_time.is_map_time;
             Map_System.is_creat = true;
             // we have access to blueprint name here as well
             Debug.Log("Entering node: " + mapNode.Node.blueprintName + " of type: " + mapNode.Node.nodeType);
@@ -73,24 +73,31 @@ namespace Map
             {
                 case NodeType.MinorEnemy://戰鬥
                     Map_System.roomcode = 0;
+                    map_time.is_load = true;
                     break;
                 case NodeType.EliteEnemy://戰鬥
                     Map_System.roomcode = 0;
+                    map_time.is_load = true;
                     break;
                 case NodeType.RestSite://休息
                     Map_System.roomcode = 1;
+                    map_time.is_load = true;
                     break;
                 case NodeType.Treasure://戰鬥
                     Map_System.roomcode = 0;
+                    map_time.is_load = true;
                     break;
                 case NodeType.Store: //戰鬥
                     Map_System.roomcode = 0;
+                    map_time.is_load = true;
                     break;
                 case NodeType.Boss: //BOSS
                     Map_System.roomcode = 2;
+                    map_time.is_load = true;
                     break;
                 case NodeType.Mystery://戰鬥
                     Map_System.roomcode = 0;
+                    map_time.is_load = true;
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();

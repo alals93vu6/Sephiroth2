@@ -4,6 +4,7 @@ using Project;
 using Project.Event;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class Map_System : MonoBehaviour
 {
@@ -27,27 +28,30 @@ public class Map_System : MonoBehaviour
 
     [Header("MAP")]
     [SerializeField] public static int roomcode; //  0=戰鬥 1=休息 2=BOSS 3=小黑
-    [SerializeField] public static bool is_map_time = true;
-    //打完一場戰鬥後都要  Map_System.is_map_time = ! Map_System.is_map_time; 切回我們的選地圖
+
 
     int new_map;
     public static int old_a = 0;
     public static bool is_creat = false;
+
     // Start is called before the first frame update
     void Start()
     {
-        load_Map(old_a);
+        PlayerPrefs.SetInt("Roomcode", roomcode);
+        PlayerPrefs.SetInt("Level", Map_level);
+        //load_Map(old_a);
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(is_next_map);
-        //Debug.Log(Map_level);
-        //Debug.Log(roomcode);
-        //Debug.Log(is_map_time);
         load_test();
         next_basic_map();
+        endgame();
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            map_time.is_map_time = !map_time.is_map_time;
+        }
     }
 
     void load_Map(int new_a)
@@ -58,7 +62,6 @@ public class Map_System : MonoBehaviour
         old_a = new_a;
         // Debug.Log(new_a);
         //is_next_map = false;
-
     }
 
     void load_test() //測試用
@@ -97,8 +100,8 @@ public class Map_System : MonoBehaviour
     }
     void next_basic_map() // set_level
     {
-        //var MonsterInstantiate = FindObjectOfType<OnInstantiate>();
-        if (is_map_time == false)
+        var MonsterInstantiate = FindObjectOfType<OnInstantiate>();
+        if (map_time.is_map_time == false)
         {
             if (is_creat)
             {
@@ -106,8 +109,8 @@ public class Map_System : MonoBehaviour
                 {
                     Debug.Log("Basic_level");
                     map_reader(false, true, false, false, false);
-                    //EventBus.Post(new RoundStartDetected());
-                    //MonsterInstantiate.OnInstantiateMonster();
+                    EventBus.Post(new RoundStartDetected());
+                    MonsterInstantiate.OnInstantiateMonster();
                     new_map = Random.Range(1, 5);
                     load_Map(new_map);
                     load_Map(new_map);
@@ -121,18 +124,18 @@ public class Map_System : MonoBehaviour
                     load_Map(new_map);
                     Instantiate(recover);
                     Debug.Log("Recover_level");
-                    //EventBus.Post(new RoundOverDetected());
+                    EventBus.Post(new RoundOverDetected());
                 }
 
                 if (roomcode == 2) //Boss房間
                 {
                     Debug.Log("Boss_level");
                     map_reader(false, false, false, false, true);
-                    //EventBus.Post(new RoundStartDetected());
+                    EventBus.Post(new RoundStartDetected());
                     new_map = Random.Range(1, 5);
                     load_Map(new_map);
                     load_Map(new_map);
-                    //MonsterInstantiate.OnInstantiateMonster();
+                    MonsterInstantiate.OnInstantiateMonster();
                 }
                 if (roomcode == 0 && Map_level == 3)//小黑取得
                 {
@@ -143,7 +146,6 @@ public class Map_System : MonoBehaviour
                 }
                 is_creat = false;
             }
-
         }
     }
 
@@ -155,5 +157,11 @@ public class Map_System : MonoBehaviour
         Recover_map = recover;
         Boss_map = boss;
     }
-
+    void endgame()
+    {
+        if (map_time.is_map_time)
+        {
+            SceneManager.LoadScene(4);
+        }
+    }
 }
