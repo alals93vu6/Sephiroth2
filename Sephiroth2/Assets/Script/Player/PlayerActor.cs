@@ -21,12 +21,8 @@ public class PlayerActor : MonoBehaviour
     void Update()
     {
         CurrenState.OnStayState(this);
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            PlayerDefenseActor();
-        }
     }
-
+/*
     public void PlayerDefenseActor()
     {
         RemainingDefense--;
@@ -36,7 +32,7 @@ public class PlayerActor : MonoBehaviour
             _pointerManager.OnPlayerDefense();
         }
     }
-
+*/
 
     public void changeState(IState nextState)
     {

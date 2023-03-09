@@ -3,6 +3,24 @@
   <component name="ChangeListManager">
     <list default="true" id="a91af2bd-aa7a-469b-a1f3-851aab1851a3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sephiroth2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sephiroth2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resouces/Map/Map_System/map_time.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resouces/Map/Map_System/map_time.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resouces/Map/Recover.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resouces/Map/Recover.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Map_Scenes.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Map_Scenes.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/GamePlaying/EventBus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GamePlaying/EventBus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/GamePlaying/FettleGeneric.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GamePlaying/FettleGeneric.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/GamePlaying/GamePlayingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GamePlaying/GamePlayingManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/GamePlaying/Pointer/PointerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GamePlaying/Pointer/PointerManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Monster/DemoMonster/MonsterBall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Monster/DemoMonster/MonsterBall.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Monster/DemoMonster/MonsterTank.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Monster/DemoMonster/MonsterTank.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Monster/DemoMonster/MonsterTurtle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Monster/DemoMonster/MonsterTurtle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerActor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/PlayerActor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/PlayerManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerState/PlayerRound.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/PlayerState/PlayerRound.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerTurntable/EventAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/PlayerTurntable/EventAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts_Map/ReorderableList/Example/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts_Map/ReorderableList/List/Attributes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts_Map/ReorderableList/List/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts_Map/UI Lines/Utilities.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +50,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Script/Player/Summoner/Support_Owl/OwlManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Player/TurntableManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Test/ScriptTest/AAA.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../User/Desktop/每周瘋狗課程/第2周_汁郎/unity/week2/Assets/C#/AudioManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../User/Desktop/每周瘋狗課程/第2周_汁郎/unity/week2/Assets/C#/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -130,6 +148,7 @@
       <workItem from="1677598910302" duration="16517000" />
       <workItem from="1677621808322" duration="5216000" />
       <workItem from="1678305753749" duration="2436000" />
+      <workItem from="1678368421526" duration="7514000" />
     </task>
     <servers />
   </component>

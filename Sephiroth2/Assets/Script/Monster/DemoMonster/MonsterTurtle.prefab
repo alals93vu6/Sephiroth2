@@ -125,11 +125,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34446b1b80b475444af65c627b6f102c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyMaxHP: 20
+  EnemyMaxHP: 4
   EnemyNowHP: 0
   AttackCD: 0
   AttackCycle: 1
-  AttackDamage: 2
+  AttackDamage: 0
   PositionalOrder: 0
   IsDead: 0
   ShowHPimg: {fileID: 0}

@@ -44,11 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 926089abfe77ca34784809ca0ebfb5b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyMaxHP: 30
+  EnemyMaxHP: 4
   EnemyNowHP: 0
   AttackCD: 0
   AttackCycle: 4
-  AttackDamage: 6
+  AttackDamage: 0
   PositionalOrder: 0
   IsDead: 0
   ShowHPimg: {fileID: 0}

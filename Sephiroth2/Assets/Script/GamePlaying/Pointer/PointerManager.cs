@@ -26,12 +26,6 @@ public class PointerManager : MonoBehaviour
         EventBus.Post(new StopTruntableDetected());
     }
 
-    public void OnPlayerDefense()
-    {
-        EventBus.Post(new DefenseAttackDetected());
-    }
-
-
     public void OnResetPointer()
     {
         IsRun = true;

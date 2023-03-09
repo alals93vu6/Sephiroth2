@@ -5,16 +5,22 @@ using System.Threading.Tasks;
 using Project;
 using Project.Event;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class GamePlayingManager : MonoBehaviour
 {
     [SerializeField] private PlayerManager _playerManager;
-    [SerializeField] public TurntableGeneric[] _turntableGenerics;
+    [SerializeField] private TurntableGeneric[] _turntableGenerics;
     [SerializeField] public MonsterGeneric[] _MonsterGenerics;
     // Start is called before the first frame update
     void Start()
     {
+        UnityEngine.SceneManagement.SceneManager.activeSceneChanged += delegate(Scene arg0, Scene scene)
+        {
+            EventBus.OnChangeScenes();
+        };
+        
         EventLoad();
         ReLoadEventTuntable();
         OnStart();
@@ -61,7 +67,7 @@ public class GamePlayingManager : MonoBehaviour
         HpUI.ResetHPUI();
     }
 
-    private void OnFightEnd(RoundOverDetected obj)
+    private async void OnFightEnd(RoundOverDetected obj)
     {
         var PlayerWin = FindObjectOfType<Ending_effect>();
         var Pointer = FindObjectOfType<PointerManager>();
@@ -70,8 +76,11 @@ public class GamePlayingManager : MonoBehaviour
         Pointer.IsRun = false;
         PointerShow.MoveSpeed = 0f;
         PlayerWin.OnPlayerWin();
-        map_time.is_map_time = true;
+
+        await Task.Delay(2500);
+        
         Destroy(GameObject.FindWithTag("Build"));
+        map_time.is_map_time = true;
     }
 
     private async void OnPlayerDead(PlayerDeadDetected obj)
@@ -109,7 +118,11 @@ public class GamePlayingManager : MonoBehaviour
     {
         _playerManager._playerActor.changeState(new PlayerRound());
         _playerManager._playerActor.RemainingDefense = 3f;
-        Array.ForEach(_MonsterGenerics, monsters => monsters.OnPassRound());
+        foreach (var VARIABLE in _MonsterGenerics)
+        {
+            VARIABLE.OnPassRound();
+        }
+        //Array.ForEach(_MonsterGenerics, monsters => monsters.OnPassRound());
     }
 
     private void OnDefenseAttack(DefenseAttackDetected obj)
@@ -118,11 +131,21 @@ public class GamePlayingManager : MonoBehaviour
     }
     private void OnStopTruntable(StopTruntableDetected obj)
     {
-        Array.ForEach(_turntableGenerics, turnyable => turnyable.OnChoseEvent());
+        Debug.Log(_turntableGenerics.Length);
+        
+        for (int i = 0; i < _turntableGenerics.Length; i++)
+        {
+            Debug.Log(_turntableGenerics[i].name);
+            
+            _turntableGenerics[i].OnChoseEvent();
+        }
+
+        
     }
 
     public void ReLoadEventTuntable()
     {
+        _turntableGenerics = new TurntableGeneric[0];
         _turntableGenerics = FindObjectsOfType<TurntableGeneric>();
     }
 

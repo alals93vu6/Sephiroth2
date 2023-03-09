@@ -14,6 +14,7 @@ public class PlayerRound : IState
     public void OnStayState(object action)
     {
         var actor = (PlayerActor) action;
+        
         if (Input.GetKeyDown(KeyCode.Space))
         {
             actor._pointerManager.OnStopPointer();

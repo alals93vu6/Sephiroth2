@@ -22,12 +22,6 @@ public class PlayerManager : MonoBehaviour
         _turntable = FindObjectOfType<TurntableManager>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    
 
 
 }

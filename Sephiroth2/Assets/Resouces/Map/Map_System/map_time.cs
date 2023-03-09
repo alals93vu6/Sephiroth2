@@ -20,7 +20,7 @@ public class map_time : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(is_map_time);
+        //Debug.Log(is_map_time);
         ResetMap();
         changscene(3, 4);
 
