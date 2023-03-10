@@ -75,16 +75,16 @@ namespace Map
                     Map_System.roomcode = 0;
                     map_time.is_load = true;
                     break;
-                case NodeType.EliteEnemy://戰鬥
-                    Map_System.roomcode = 0;
+                case NodeType.EliteEnemy://菁英戰鬥
+                    Map_System.roomcode = 4;
                     map_time.is_load = true;
                     break;
                 case NodeType.RestSite://休息
                     Map_System.roomcode = 1;
                     map_time.is_load = true;
                     break;
-                case NodeType.Treasure://戰鬥
-                    Map_System.roomcode = 0;
+                case NodeType.Treasure://菁英戰鬥
+                    Map_System.roomcode = 4;
                     map_time.is_load = true;
                     break;
                 case NodeType.Store: //戰鬥
