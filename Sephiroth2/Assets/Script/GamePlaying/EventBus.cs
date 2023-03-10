@@ -63,7 +63,7 @@ namespace Project{
 			}
 			else{
 				var fullName = type.Name;
-				Debug.Log($" Event {fullName}  is no subscriber");
+				//Debug.Log($" Event {fullName}  is no subscriber");
 			}
 		}
 

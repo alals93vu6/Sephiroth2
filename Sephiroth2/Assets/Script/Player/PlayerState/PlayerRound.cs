@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Project;
+using Project.Event;
 using UnityEngine;
 
 public class PlayerRound : IState
@@ -17,7 +19,8 @@ public class PlayerRound : IState
         
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            actor._pointerManager.OnStopPointer();
+            //actor._pointerManager.OnStopPointer();
+            EventBus.Post(new StopTruntableDetected());
             actor.changeState(new WaitRound());
         }
     }

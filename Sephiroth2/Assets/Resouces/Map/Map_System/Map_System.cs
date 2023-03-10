@@ -107,7 +107,7 @@ public class Map_System : MonoBehaviour
             {
                 if (roomcode == 0) //一般戰鬥
                 {
-                    Debug.Log("Basic_level");
+                    //Debug.Log("Basic_level");
                     map_reader(false, true, false, false, false);
                     EventBus.Post(new RoundStartDetected());
                     MonsterInstantiate.OnInstantiateMonster();
@@ -123,13 +123,13 @@ public class Map_System : MonoBehaviour
                     load_Map(new_map);
                     load_Map(new_map);
                     Instantiate(recover);
-                    Debug.Log("Recover_level");
+                    //Debug.Log("Recover_level");
                     EventBus.Post(new RoundOverDetected());
                 }
 
                 if (roomcode == 2) //Boss房間
                 {
-                    Debug.Log("Boss_level");
+                    //Debug.Log("Boss_level");
                     map_reader(false, false, false, false, true);
                     EventBus.Post(new RoundStartDetected());
                     new_map = Random.Range(1, 5);

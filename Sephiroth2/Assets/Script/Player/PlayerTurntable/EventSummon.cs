@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Project;
 using Project.Event;
@@ -10,15 +11,21 @@ public class EventSummon : TurntableGeneric
     [SerializeField] public bool IsSummon;
     public override void OnPointed()
     {
+        //base.OnPointed();
         if (IsSummon)
         {
             ChangeLocation();
+            Debug.Log("SummonA");
         }
         else
         {
             CheckIsFirst();
+            Debug.Log("SummonB");
         }
+
+        Debug.Log("Summon");
     }
+
     private void ChangeLocation()
     {
         string thisSummonerName = ThisNo == 1 ? "TheSummonerA" : "TheSummonerB";

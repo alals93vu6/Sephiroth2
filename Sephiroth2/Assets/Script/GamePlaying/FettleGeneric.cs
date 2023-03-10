@@ -13,7 +13,7 @@ public class FettleGeneric : MonoBehaviour
     void Start()
     {
         OnStart();
-        _hpData.NowHP =  _hpData.MaxHP;
+        //_hpData.NowHP =  _hpData.MaxHP;
     }
 
     // Update is called once per frame

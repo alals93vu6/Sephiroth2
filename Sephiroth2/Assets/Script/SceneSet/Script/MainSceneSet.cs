@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
@@ -25,8 +26,9 @@ public class MainSceneSet : MonoBehaviour
         // Chang_TipTransform(TipGameObject.localPosition, 5);
         //keyset();
     }
-    public void LoadScene_Scene(int SceneID)
+    public async void LoadScene_Scene(int SceneID)
     {
+        await Task.Delay(200);
         SceneManager.LoadScene(SceneID);
         if (SceneID == GamePlay_scenes_ID)
         {

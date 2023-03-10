@@ -34,7 +34,6 @@ public class GamePlayingManager : MonoBehaviour
         EventBus.Subscribe<NewRoundDetected>(OnNewRound);
         EventBus.Subscribe<OnEnemyActorDetected>(OnEnemyActor);
         EventBus.Subscribe<PlayerAttackDetected>(OnPlayerAttack);
-        EventBus.Subscribe<DefenseAttackDetected>(OnDefenseAttack);
         EventBus.Subscribe<PlayerOnSummonDetected>(OnPlayerSummon);
         EventBus.Subscribe<PlayerDeadDetected>(OnPlayerDead);
         EventBus.Subscribe<RoundStartDetected>(OnFightStart);
@@ -124,35 +123,22 @@ public class GamePlayingManager : MonoBehaviour
         }
         //Array.ForEach(_MonsterGenerics, monsters => monsters.OnPassRound());
     }
-
-    private void OnDefenseAttack(DefenseAttackDetected obj)
-    {
-        //Array.ForEach(_turntableGenerics,turnyable => turnyable.OnChoseDefense());
-    }
     private void OnStopTruntable(StopTruntableDetected obj)
     {
-        Debug.Log(_turntableGenerics.Length);
-        
-        for (int i = 0; i < _turntableGenerics.Length; i++)
-        {
-            Debug.Log(_turntableGenerics[i].name);
-            
-            _turntableGenerics[i].OnChoseEvent();
-        }
-
-        
+        //Debug.Log(_turntableGenerics.Length);
+        Array.ForEach(_turntableGenerics,ChoseTurntable => ChoseTurntable.OnChoseEvent());
     }
 
     public void ReLoadEventTuntable()
     {
-        _turntableGenerics = new TurntableGeneric[0];
+        //_turntableGenerics = new TurntableGeneric[0];
         _turntableGenerics = FindObjectsOfType<TurntableGeneric>();
     }
 
     public void ReLoadEventMonster()
     {
         _MonsterGenerics = FindObjectsOfType<MonsterGeneric>();
-        Debug.Log("FindMonster");
+        //Debug.Log("FindMonster");
     }
 
 

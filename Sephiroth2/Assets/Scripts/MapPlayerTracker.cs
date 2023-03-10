@@ -65,7 +65,7 @@ namespace Map
             map_time.is_map_time = !map_time.is_map_time;
             Map_System.is_creat = true;
             // we have access to blueprint name here as well
-            Debug.Log("Entering node: " + mapNode.Node.blueprintName + " of type: " + mapNode.Node.nodeType);
+            //Debug.Log("Entering node: " + mapNode.Node.blueprintName + " of type: " + mapNode.Node.nodeType);
             // load appropriate scene with context based on nodeType:
             // or show appropriate GUI over the map: 
             // if you choose to show GUI in some of these cases, do not forget to set "Locked" in MapPlayerTracker back to false
