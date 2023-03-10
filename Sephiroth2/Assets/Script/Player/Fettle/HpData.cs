@@ -8,7 +8,9 @@ namespace Project.PlayerHpData
     public class HpData : ScriptableObject
     {
         [SerializeField] public Image ShowPlayerHP;
+        [SerializeField] public Image ShowPlayerArmor;
         [SerializeField] public float ShowHPFloat;
+        [SerializeField] public float ShowArmorFloat;
         [SerializeField] public float MaxHP;
         [SerializeField] public float NowHP;
         [SerializeField] public float ArmorValue;

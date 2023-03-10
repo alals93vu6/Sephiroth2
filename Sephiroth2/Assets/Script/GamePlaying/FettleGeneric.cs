@@ -23,24 +23,31 @@ public class FettleGeneric : MonoBehaviour
         _hpData.NowHP = Mathf.Clamp(_hpData.NowHP, 0, _hpData.MaxHP);
         _hpData.ArmorValue = Mathf.Clamp(_hpData.ArmorValue, 0, _hpData.MaxHP / 2);
         _hpData.ShowHPFloat =  _hpData.NowHP /  _hpData.MaxHP;
+        _hpData.ShowArmorFloat = _hpData.ArmorValue / (_hpData.MaxHP / 2);
         _hpData.ShowPlayerHP.fillAmount = Mathf.Lerp( _hpData.ShowPlayerHP.fillAmount,  _hpData.ShowHPFloat, 0.02f);
+        _hpData.ShowPlayerArmor.fillAmount = Mathf.Lerp(_hpData.ShowPlayerArmor.fillAmount, _hpData.ShowArmorFloat, 0.2f);
     }
 
     public virtual void OnStart()
     {
+        _hpData.ArmorValue = 0f;
+        
         if (StatyLocation == 1)
         {
             _hpData.ShowPlayerHP = GameObject.Find("PlayerHpShow").GetComponent<Image>();
+            _hpData.ShowPlayerArmor = GameObject.Find("PlayerArmorShow").GetComponent<Image>();
         }
         
         if (StatyLocation == 3)
         {
             _hpData.ShowPlayerHP = GameObject.Find("SummonAHpShow").GetComponent<Image>();
+            _hpData.ShowPlayerArmor = GameObject.Find("SummonAArmorShow").GetComponent<Image>();
         }
         
         if (StatyLocation == 4)
         {
             _hpData.ShowPlayerHP = GameObject.Find("SummonBHpShow").GetComponent<Image>();
+            _hpData.ShowPlayerArmor = GameObject.Find("SummonBArmorShow").GetComponent<Image>();
         }
         //_hpData.ShowPlayerHP = GameObject.Find("PlayerHpShow").GetComponent<Image>();
     }
