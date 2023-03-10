@@ -25,7 +25,7 @@ public class FettleGeneric : MonoBehaviour
         _hpData.ShowHPFloat =  _hpData.NowHP /  _hpData.MaxHP;
         _hpData.ShowArmorFloat = _hpData.ArmorValue / (_hpData.MaxHP / 2);
         _hpData.ShowPlayerHP.fillAmount = Mathf.Lerp( _hpData.ShowPlayerHP.fillAmount,  _hpData.ShowHPFloat, 0.02f);
-        _hpData.ShowPlayerArmor.fillAmount = Mathf.Lerp(_hpData.ShowPlayerArmor.fillAmount, _hpData.ShowArmorFloat, 0.2f);
+        _hpData.ShowPlayerArmor.fillAmount = Mathf.Lerp(_hpData.ShowPlayerArmor.fillAmount, _hpData.ShowArmorFloat, 0.07f);
     }
 
     public virtual void OnStart()

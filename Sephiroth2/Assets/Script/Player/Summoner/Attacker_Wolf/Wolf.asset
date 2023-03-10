@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Wolf
   m_EditorClassIdentifier: 
   ShowPlayerHP: {fileID: 0}
-  ShowHPFloat: 1
+  ShowPlayerArmor: {fileID: 0}
+  ShowHPFloat: 0.5
+  ShowArmorFloat: 0.33333334
   MaxHP: 18
-  NowHP: 18
+  NowHP: 9
   ArmorValue: 3
   ArmorDefense: 2
