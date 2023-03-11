@@ -15,15 +15,15 @@ public class EventSummon : TurntableGeneric
         if (IsSummon)
         {
             ChangeLocation();
-            Debug.Log("SummonA");
+            //Debug.Log("SummonA");
         }
         else
         {
             CheckIsFirst();
-            Debug.Log("SummonB");
+            //Debug.Log("SummonB");
         }
 
-        Debug.Log("Summon");
+        //Debug.Log("Summon");
     }
 
     private void ChangeLocation()

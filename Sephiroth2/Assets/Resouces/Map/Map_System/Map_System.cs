@@ -46,7 +46,7 @@ public class Map_System : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(roomcode);
+        //Debug.Log(roomcode);
         load_test();
         next_basic_map();
         endgame();

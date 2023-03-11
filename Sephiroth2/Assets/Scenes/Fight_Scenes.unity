@@ -1187,32 +1187,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsChess: 0
---- !u!114 &1081296604
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3570966547437459618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccb6fa019ba1cda409e373e7a74ba8b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsChess: 0
---- !u!114 &1081296605
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3570966547087194466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccb6fa019ba1cda409e373e7a74ba8b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsChess: 0
 --- !u!114 &1081296606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1653,6 +1627,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5230020956795697827, guid: 65415bd5c62ec2448b8666c6babceab4,
+        type: 3}
+      propertyPath: EnemyMaxHP
+      value: 99
+      objectReference: {fileID: 0}
     - target: {fileID: 9126700782627205628, guid: 65415bd5c62ec2448b8666c6babceab4,
         type: 3}
       propertyPath: m_Name
@@ -1661,7 +1640,7 @@ PrefabInstance:
     - target: {fileID: 9126700782627205628, guid: 65415bd5c62ec2448b8666c6babceab4,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9126700782627205629, guid: 65415bd5c62ec2448b8666c6babceab4,
         type: 3}
@@ -2420,14 +2399,48 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 792597227244042148}
+  - component: {fileID: 792597227244042150}
   - component: {fileID: 792597227244042147}
+  - component: {fileID: 792597227244042151}
   m_Layer: 0
-  m_Name: owl
+  m_Name: OwlANA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &792597227244042150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792597227244042149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a11abed1132d694c8688b5de5204eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  an: {fileID: 0}
+--- !u!95 &792597227244042151
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792597227244042149}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 81407750ad03db04e9047301bcedb420, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &792597227516661878
 Transform:
   m_ObjectHideFlags: 0
@@ -2580,14 +2593,48 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 792597227710368785}
+  - component: {fileID: 792597227710368787}
   - component: {fileID: 792597227710368784}
+  - component: {fileID: 792597227710368788}
   m_Layer: 0
-  m_Name: Wolf_animation
+  m_Name: WolfANA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &792597227710368787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792597227710368786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a11abed1132d694c8688b5de5204eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  an: {fileID: 0}
+--- !u!95 &792597227710368788
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792597227710368786}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3fb3b6453296bad4c9caa4819c041979, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!212 &792597228514200231
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2662,14 +2709,48 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 792597228514200232}
+  - component: {fileID: 792597228514200234}
   - component: {fileID: 792597228514200231}
+  - component: {fileID: 792597228514200235}
   m_Layer: 0
-  m_Name: PlayerAnimator
+  m_Name: PlayerANA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &792597228514200234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792597228514200233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a11abed1132d694c8688b5de5204eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  an: {fileID: 0}
+--- !u!95 &792597228514200235
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792597228514200233}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a244b05f46120c04996dd8b1d83c1f31, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &792597228691677484
 Transform:
   m_ObjectHideFlags: 0
@@ -2678,7 +2759,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 792597228691677488}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18.86, y: -2, z: 0}
+  m_LocalPosition: {x: -17.87, y: -2, z: 0}
   m_LocalScale: {x: 0.6274782, y: 0.6274782, z: 0.6274782}
   m_Children:
   - {fileID: 792597227244042148}
@@ -3452,8 +3533,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3570966547087194467}
   - component: {fileID: 3570966547087194465}
+  - component: {fileID: 3570966547087194468}
   - component: {fileID: 3570966547087194464}
-  - component: {fileID: 1081296605}
   m_Layer: 0
   m_Name: Wolf_DefenseA
   m_TagString: Untagged
@@ -3475,6 +3556,19 @@ Transform:
   m_Father: {fileID: 3570966548446127498}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3570966547087194468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3570966547087194466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e81ccb6e94523d44e88d79eeeabf6cd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsChess: 0
 --- !u!1 &3570966547099630153
 GameObject:
   m_ObjectHideFlags: 0
@@ -4162,7 +4256,7 @@ GameObject:
   - component: {fileID: 3570966547437459619}
   - component: {fileID: 3570966547437459617}
   - component: {fileID: 3570966547437459616}
-  - component: {fileID: 1081296604}
+  - component: {fileID: 3570966547437459620}
   m_Layer: 0
   m_Name: Wolf_DefenseB
   m_TagString: Untagged
@@ -4184,6 +4278,19 @@ Transform:
   m_Father: {fileID: 3570966548446127498}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3570966547437459620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3570966547437459618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e81ccb6e94523d44e88d79eeeabf6cd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsChess: 0
 --- !u!1 &3570966547498702353
 GameObject:
   m_ObjectHideFlags: 0
