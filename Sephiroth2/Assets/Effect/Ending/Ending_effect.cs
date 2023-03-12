@@ -16,7 +16,7 @@ public class Ending_effect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //end();
+        end();
     }
 
     void end()

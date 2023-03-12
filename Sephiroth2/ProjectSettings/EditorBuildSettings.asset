@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Setting_gameing.unity
     guid: 4f5764f9579c30c48804f11f03f9ca5d
+  - enabled: 1
+    path: Assets/Scenes/BeginAN.unity
+    guid: fb71cf3fd745f134a8bfb55e840910bd
   m_configObjects: {}
