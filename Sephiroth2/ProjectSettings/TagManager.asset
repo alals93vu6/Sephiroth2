@@ -13,6 +13,7 @@ TagManager:
   - Build
   - ChooseMap_backGround
   - ChooseMap
+  - Begin
   layers:
   - Default
   - TransparentFX
