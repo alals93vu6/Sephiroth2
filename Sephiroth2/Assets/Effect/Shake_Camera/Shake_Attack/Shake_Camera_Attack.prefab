@@ -69,7 +69,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  duration: 0.85
+  duration: 1
 --- !u!114 &981183308992674316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82,4 +82,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d3ddd128e2ce2b43b0eeff1f43871b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Destroy_Time: 0.9
+  Destroy_Time: 2

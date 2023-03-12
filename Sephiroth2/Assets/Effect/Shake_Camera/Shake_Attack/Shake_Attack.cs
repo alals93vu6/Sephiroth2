@@ -19,7 +19,6 @@ public class Shake_Attack : MonoBehaviour
     [Header("晃動時長")]
     [SerializeField] public float duration;
 
-
     void Update()
     {
         if (start_attack)

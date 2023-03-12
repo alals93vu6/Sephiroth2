@@ -11,7 +11,7 @@ public class Creat_Effect_Player : MonoBehaviour
         instance = this;
     }
     #endregion
-    
+
     [Header("恢復特效位置")]
     [SerializeField] public List<GameObject> Buff_Recover_pos;
     [Header("防禦特效位置")]
@@ -26,9 +26,10 @@ public class Creat_Effect_Player : MonoBehaviour
     [SerializeField] public GameObject Attack_Basic;
     [SerializeField] public GameObject Shake_Camera_Attack;
 
+    
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -45,7 +46,7 @@ public class Creat_Effect_Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.C))
         {
             Creat(Attack_Basic, Buff_Hit_pos[0]);
-            Instantiate(Shake_Camera_Attack,gameObject.transform.position,new Quaternion(0,0,0,0));
+            Instantiate(Shake_Camera_Attack, gameObject.transform.position, new Quaternion(0, 0, 0, 0));
         }
 
     }
