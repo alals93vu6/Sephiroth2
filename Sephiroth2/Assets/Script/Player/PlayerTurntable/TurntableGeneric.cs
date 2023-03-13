@@ -2,21 +2,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TurntableGeneric : MonoBehaviour
 {
     [SerializeField] public bool IsChess;
-    [SerializeField] private AssignedDisplay iconDisplay;
+    [SerializeField] private string FindName;
     void Start()
     {
-        
+        FindName = this.gameObject.name + "Icon";
+        ChangeIcon(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        var FindName = this.gameObject.name + "Icon";
-        Debug.Log(FindName);
+        
+        //Debug.Log(FindName);
     }
 
     public void OnChoseEvent()
@@ -32,11 +34,25 @@ public class TurntableGeneric : MonoBehaviour
         
     }
 
+    public virtual void ChangeIcon(bool Display)
+    {
+        var IconCtrl = GameObject.Find(FindName).GetComponent<Image>();
+        if (Display)
+        {
+            IconCtrl.color = new Color(255, 255, 255, 1);
+        }
+        else
+        {
+            IconCtrl.color = new Color(255, 255, 255, 0);
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "Pointer")
         {
             IsChess = true;
+            ChangeIcon(true);
         }
     }
 
@@ -45,6 +61,7 @@ public class TurntableGeneric : MonoBehaviour
         if (other.gameObject.tag == "Pointer")
         {
             IsChess = false;
+            ChangeIcon(false);
         }
     }
     

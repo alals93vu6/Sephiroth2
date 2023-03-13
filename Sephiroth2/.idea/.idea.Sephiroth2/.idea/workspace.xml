@@ -4,8 +4,6 @@
     <list default="true" id="a91af2bd-aa7a-469b-a1f3-851aab1851a3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sephiroth2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sephiroth2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fight_Scenes.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Fight_Scenes.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/GamePlaying/UI/AssignedDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GamePlaying/UI/AssignedDisplay.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/GamePlaying/UI/SummonAssigendDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GamePlaying/UI/SummonAssigendDisplay.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerTurntable/TurntableGeneric.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/PlayerTurntable/TurntableGeneric.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,6 +34,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Script/Player/Summoner/SummonerManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Player/Summoner/Support_Owl/OwlFettle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Player/Summoner/Support_Owl/OwlManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Player/Summoner/Support_Owl/Owl_Turntable/Event_owlOnHeal.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Player/TurntableManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Test/ScriptTest/AAA.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@1.2.1/Rider/Editor/ProjectGeneration/ProjectGeneration.cs" root0="SKIP_HIGHLIGHTING" />
@@ -140,7 +139,7 @@
       <workItem from="1678368421526" duration="7514000" />
       <workItem from="1678428994712" duration="4492000" />
       <workItem from="1678510683097" duration="2314000" />
-      <workItem from="1678689802942" duration="2565000" />
+      <workItem from="1678689802942" duration="6022000" />
     </task>
     <servers />
   </component>
