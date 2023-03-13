@@ -38,12 +38,23 @@ public class TurntableGeneric : MonoBehaviour
 
     public virtual void ChangeIcon(bool Display)
     {
+        var SpecialIconCtrl = GameObject.Find(FindName).GetComponent<AssignedDisplay>();
         if (SpecialIcon)
         {
-            
+            //Debug.Log("AAA");
+            if (Display)
+            {
+               SpecialIconCtrl.SpecialIcon[SpecialIconCtrl.ShowNumber].color = new Color(255, 255, 255, 1);
+               //Debug.Log(SpecialIconCtrl.SpecialIcon[SpecialIconCtrl.ShowNumber].name);
+            }
+            else
+            {
+                SpecialIconCtrl.SpecialIcon[SpecialIconCtrl.ShowNumber].color = new Color(255, 255, 255, 0);
+            }
         }
         else
         {
+            //Debug.Log("BBB");
             var IconCtrl = GameObject.Find(FindName).GetComponent<Image>();
             if (Display)
             {
