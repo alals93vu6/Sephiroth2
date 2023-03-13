@@ -8,12 +8,12 @@ public class SummonAssigendDisplay : MonoBehaviour
 
     public void OnAssigned()
     {
-        disPlayIcon[0].SetActive(false);
+        disPlayIcon[0].SetActive(true);
     }
 
     public void ExitAssigned()
     {
-        disPlayIcon[0].SetActive(true);
+        disPlayIcon[0].SetActive(false);
     }
 
     public void OnChangeIcon()

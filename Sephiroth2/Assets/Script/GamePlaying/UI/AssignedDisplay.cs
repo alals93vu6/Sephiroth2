@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class AssignedDisplay : MonoBehaviour
 {
-    [SerializeField] private GameObject disPlayIcon;
-
     public void OnAssigned()
     {
-        disPlayIcon.SetActive(false);
+        this.gameObject.SetActive(true);
     }
 
     public void ExitAssigned()
     {
-        disPlayIcon.SetActive(true);
+        this.gameObject.SetActive(false);
     }
 }

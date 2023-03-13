@@ -6,6 +6,7 @@ using UnityEngine;
 public class TurntableGeneric : MonoBehaviour
 {
     [SerializeField] public bool IsChess;
+    [SerializeField] private AssignedDisplay iconDisplay;
     void Start()
     {
         
@@ -14,7 +15,8 @@ public class TurntableGeneric : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        var FindName = this.gameObject.name + "Icon";
+        Debug.Log(FindName);
     }
 
     public void OnChoseEvent()
