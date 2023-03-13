@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a91af2bd-aa7a-469b-a1f3-851aab1851a3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sephiroth2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sephiroth2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fight_Scenes.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Fight_Scenes.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/GamePlaying/UI/AssignedDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GamePlaying/UI/AssignedDisplay.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerTurntable/TurntableGeneric.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/PlayerTurntable/TurntableGeneric.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -139,7 +139,7 @@
       <workItem from="1678368421526" duration="7514000" />
       <workItem from="1678428994712" duration="4492000" />
       <workItem from="1678510683097" duration="2314000" />
-      <workItem from="1678689802942" duration="6022000" />
+      <workItem from="1678689802942" duration="7793000" />
     </task>
     <servers />
   </component>

@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class TurntableGeneric : MonoBehaviour
 {
     [SerializeField] public bool IsChess;
+    [SerializeField] private bool SpecialIcon;
     [SerializeField] private string FindName;
     void Start()
     {
@@ -36,17 +38,24 @@ public class TurntableGeneric : MonoBehaviour
 
     public virtual void ChangeIcon(bool Display)
     {
-        var IconCtrl = GameObject.Find(FindName).GetComponent<Image>();
-        if (Display)
+        if (SpecialIcon)
         {
-            IconCtrl.color = new Color(255, 255, 255, 1);
+            
         }
         else
         {
-            IconCtrl.color = new Color(255, 255, 255, 0);
+            var IconCtrl = GameObject.Find(FindName).GetComponent<Image>();
+            if (Display)
+            {
+                IconCtrl.color = new Color(255, 255, 255, 1);
+            }
+            else
+            {
+                IconCtrl.color = new Color(255, 255, 255, 0);
+            }
         }
     }
-
+    
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "Pointer")

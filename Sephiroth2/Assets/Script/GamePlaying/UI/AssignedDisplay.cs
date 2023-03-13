@@ -1,16 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AssignedDisplay : MonoBehaviour
 {
-    public void OnAssigned()
-    {
-        this.gameObject.SetActive(true);
-    }
-
-    public void ExitAssigned()
-    {
-        this.gameObject.SetActive(false);
-    }
+    [SerializeField] public bool IsSpecial;
+    [SerializeField] public Image[] SpecialIcon;
 }
