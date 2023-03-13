@@ -4,18 +4,6 @@
     <list default="true" id="a91af2bd-aa7a-469b-a1f3-851aab1851a3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sephiroth2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sephiroth2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fight_Scenes.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Fight_Scenes.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerTurntable/EventAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/PlayerTurntable/EventAttack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts_Map.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts_Map/ReorderableList.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts_Map/ReorderableList/Example.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts_Map/ReorderableList/Example/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts_Map/ReorderableList/List.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts_Map/ReorderableList/List/Attributes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts_Map/ReorderableList/List/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts_Map/UI Lines.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts_Map/UI Lines/Utilities.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-Editor.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-Editor.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +18,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Script/GamePlaying/MusicManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/GamePlaying/Pointer/PointerManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/GamePlaying/Pointer/ResetPoint.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/GamePlaying/UI/SummonAssigendDisplay.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/IState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Menu/GameStart_HPSet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Monster/MonsterGeneric.cs" root0="FORCE_HIGHLIGHTING" />
@@ -46,6 +35,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Script/Player/Summoner/Support_Owl/OwlManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Player/TurntableManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Test/ScriptTest/AAA.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@1.2.1/Rider/Editor/ProjectGeneration/ProjectGeneration.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../User/Desktop/每周瘋狗課程/第2周_汁郎/unity/week2/Assets/C#/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -147,6 +137,7 @@
       <workItem from="1678368421526" duration="7514000" />
       <workItem from="1678428994712" duration="4492000" />
       <workItem from="1678510683097" duration="2314000" />
+      <workItem from="1678689802942" duration="1452000" />
     </task>
     <servers />
   </component>
