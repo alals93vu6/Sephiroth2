@@ -9,7 +9,7 @@ public class TurntableGeneric : MonoBehaviour
 {
     [SerializeField] public bool IsChess;
     [SerializeField] private bool SpecialIcon;
-    [SerializeField] private string FindName;
+    [SerializeField] public string FindName;
     void Start()
     {
         FindName = this.gameObject.name + "Icon";

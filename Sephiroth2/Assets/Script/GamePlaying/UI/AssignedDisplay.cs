@@ -9,8 +9,14 @@ public class AssignedDisplay : MonoBehaviour
     //[SerializeField] public bool IsSpecial;
     [SerializeField] public Image[] SpecialIcon;
     [SerializeField] public int ShowNumber;
+    [SerializeField] public int BackNumber;
 
     private void Start()
+    {
+        Seticon();
+    }
+
+    public void Seticon()
     {
         if (SpecialIcon.Length > 0)
         {
@@ -18,6 +24,7 @@ public class AssignedDisplay : MonoBehaviour
             {
                 SpecialIcon[i].color = new Color(255, 255, 255, 0);
             }
+            SpecialIcon[BackNumber].color = new Color(255, 255, 255, 1);
         }
     }
 }

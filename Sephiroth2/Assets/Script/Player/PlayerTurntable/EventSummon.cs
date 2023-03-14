@@ -47,6 +47,7 @@ public class EventSummon : TurntableGeneric
             locationM.PlayerLocation[targetIndex].StatyLocation = otherSummoner.IsSummon ? 2 : 0;
             IsSummon = true;
             SummonEvent();
+            ChangeSummonIcon();
         }
     }
 
@@ -66,6 +67,14 @@ public class EventSummon : TurntableGeneric
             UI.TurntableUI[1].SetActive(true);
         }
         EventBus.Post(new PlayerOnSummonDetected());
+    }
+
+    private void ChangeSummonIcon()
+    {
+        var SummonIcon = GameObject.Find(FindName).GetComponent<AssignedDisplay>();
+        SummonIcon.BackNumber = 3;
+        SummonIcon.ShowNumber = 2;
+        SummonIcon.Seticon();
     }
 
 }
