@@ -1821,6 +1821,11 @@ PrefabInstance:
       propertyPath: AttackCycle
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1836601550963556034, guid: fa88ddfb7896c434f8b6a0fe33e055a6,
+        type: 3}
+      propertyPath: AttackDamage
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3404898585173357980, guid: fa88ddfb7896c434f8b6a0fe33e055a6,
         type: 3}
       propertyPath: m_RootOrder
@@ -1829,7 +1834,7 @@ PrefabInstance:
     - target: {fileID: 3404898585173357980, guid: fa88ddfb7896c434f8b6a0fe33e055a6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.2558994
+      value: 5.1
       objectReference: {fileID: 0}
     - target: {fileID: 3404898585173357980, guid: fa88ddfb7896c434f8b6a0fe33e055a6,
         type: 3}
@@ -1891,6 +1896,11 @@ PrefabInstance:
       propertyPath: AttackCycle
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7519450582283883841, guid: fa88ddfb7896c434f8b6a0fe33e055a6,
+        type: 3}
+      propertyPath: AttackDamage
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8908286015582202926, guid: fa88ddfb7896c434f8b6a0fe33e055a6,
         type: 3}
       propertyPath: AttackCD
@@ -1905,6 +1915,11 @@ PrefabInstance:
         type: 3}
       propertyPath: AttackCycle
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8908286015582202926, guid: fa88ddfb7896c434f8b6a0fe33e055a6,
+        type: 3}
+      propertyPath: AttackDamage
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa88ddfb7896c434f8b6a0fe33e055a6, type: 3}
@@ -4688,7 +4703,7 @@ PrefabInstance:
     - target: {fileID: 2112803974576059254, guid: 2cab7007a2b8e1d4da7d8a95e75d5dcc,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.8306923
+      value: -2.1
       objectReference: {fileID: 0}
     - target: {fileID: 2112803974576059254, guid: 2cab7007a2b8e1d4da7d8a95e75d5dcc,
         type: 3}
@@ -14704,7 +14719,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &4696712866917477003
 CanvasRenderer:
   m_ObjectHideFlags: 0

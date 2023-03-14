@@ -15,7 +15,7 @@ public class Setting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(is_show_setting);
+        //Debug.Log(is_show_setting);
         esc();
     }
 

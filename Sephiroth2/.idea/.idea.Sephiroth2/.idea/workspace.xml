@@ -3,16 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="a91af2bd-aa7a-469b-a1f3-851aab1851a3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sephiroth2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sephiroth2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resouces/Map/Map_System/map_time.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resouces/Map/Map_System/map_time.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Effect/Buff/BUFF_Recover/Buff_Recover.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Effect/Buff/BUFF_Recover/Buff_Recover.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneLine/OneLine/Editor/Utils/InspectorUtil.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneLine/OneLine/Editor/Utils/InspectorUtil.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fight_Scenes.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Fight_Scenes.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Monster/DemoMonster/MonsterBall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Monster/DemoMonster/MonsterBall.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Monster/DemoMonster/MonsterTurtle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Monster/DemoMonster/MonsterTurtle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Monster/MonsterGeneric.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Monster/MonsterGeneric.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/Fettle/Player.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/Fettle/Player.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/Summoner/Attacker_Wolf/Wolf.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/Summoner/Attacker_Wolf/Wolf.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/Summoner/Support_Owl/Owl_Turntable/Event_owlOnHeal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/Summoner/Support_Owl/Owl_Turntable/Event_owlOnHeal.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/TurntableManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/TurntableManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScenes.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScenes.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/Summoner/Support_Owl/Owl.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/Summoner/Support_Owl/Owl.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/SceneSet/Script/Setting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/SceneSet/Script/Setting.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-Editor.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-Editor.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +157,7 @@
       <workItem from="1678428994712" duration="4492000" />
       <workItem from="1678510683097" duration="2314000" />
       <workItem from="1678689802942" duration="10124000" />
-      <workItem from="1678783642643" duration="3631000" />
+      <workItem from="1678783642643" duration="6852000" />
     </task>
     <servers />
   </component>
