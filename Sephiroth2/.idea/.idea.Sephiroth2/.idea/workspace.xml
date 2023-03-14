@@ -3,6 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="a91af2bd-aa7a-469b-a1f3-851aab1851a3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sephiroth2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sephiroth2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resouces/Map/Map_System/map_time.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resouces/Map/Map_System/map_time.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fight_Scenes.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Fight_Scenes.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Monster/DemoMonster/MonsterBall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Monster/DemoMonster/MonsterBall.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Monster/DemoMonster/MonsterTurtle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Monster/DemoMonster/MonsterTurtle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Monster/MonsterGeneric.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Monster/MonsterGeneric.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/Fettle/Player.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/Fettle/Player.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/Summoner/Attacker_Wolf/Wolf.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/Summoner/Attacker_Wolf/Wolf.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/Summoner/Support_Owl/Owl_Turntable/Event_owlOnHeal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/Summoner/Support_Owl/Owl_Turntable/Event_owlOnHeal.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/TurntableManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/TurntableManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +79,14 @@
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../../User/Desktop/DirectorMode/1.1\Sephiroth2.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="D:\User\Desktop\DirectorMode\1.1" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="D:\Unity\Hub\Editor\2019.4.39f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath D:\GitHub\Sephiroth2\Sephiroth2 -debugCodeOptimization" />
@@ -138,7 +156,7 @@
       <workItem from="1678428994712" duration="4492000" />
       <workItem from="1678510683097" duration="2314000" />
       <workItem from="1678689802942" duration="10124000" />
-      <workItem from="1678783642643" duration="1415000" />
+      <workItem from="1678783642643" duration="3631000" />
     </task>
     <servers />
   </component>

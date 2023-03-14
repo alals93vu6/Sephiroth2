@@ -21,12 +21,16 @@ public class MonsterGeneric : MonoBehaviour
     [SerializeField] public float ShowHPNumber;
     [Header("物件")] 
     [SerializeField] private Text CDTest;
+
+    [SerializeField] private Animator AN;
     
     // Start is called before the first frame update
     public virtual void Start()
     {
         AttackCD = AttackCycle;
         EnemyNowHP = EnemyMaxHP;
+        
+        AN = transform.GetChild(0).GetComponent<Animator>();
         HPUISet();
         TextSet();
         LocationCheck();
@@ -52,6 +56,7 @@ public class MonsterGeneric : MonoBehaviour
             {
                 AttackCD = AttackCycle;
                 StrikeTarget.PlayerOnAttackDetected(AttackDamage);
+                AN.Play("OnAttack");
             }
             else
             {

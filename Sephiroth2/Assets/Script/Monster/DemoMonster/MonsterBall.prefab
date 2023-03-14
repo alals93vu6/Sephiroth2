@@ -54,6 +54,7 @@ MonoBehaviour:
   ShowHPimg: {fileID: 0}
   ShowHPNumber: 0
   CDTest: {fileID: 0}
+  AN: {fileID: 0}
 --- !u!1 &1507557205482001758
 GameObject:
   m_ObjectHideFlags: 0
@@ -64,6 +65,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1507557205482001759}
   - component: {fileID: 1507557205482001728}
+  - component: {fileID: 6859165162360091731}
   m_Layer: 0
   m_Name: Monster_StabbingBall
   m_TagString: Untagged
@@ -135,3 +137,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &6859165162360091731
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507557205482001758}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7ea6ec8b0d0f6014ca302a54d816c490, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
